@@ -7,7 +7,7 @@
         "texture_width": 64,
         "texture_height": 64,
         "visible_bounds_width": 3,
-        "visible_bounds_height": 3.171875,
+        "visible_bounds_height": 3.2421875,
         "visible_bounds_offset": [
           0,
           1.5,
@@ -185,6 +185,80 @@
                   "uv_size": [
                     2,
                     -2
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                0.0,
+                34.75,
+                -1.125
+              ],
+              "size": [
+                1.125,
+                1.125,
+                1.125
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    41,
+                    1
+                  ],
+                  "uv_size": [
+                    1,
+                    1
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    40,
+                    1
+                  ],
+                  "uv_size": [
+                    1,
+                    1
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    43,
+                    1
+                  ],
+                  "uv_size": [
+                    1,
+                    1
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    42,
+                    1
+                  ],
+                  "uv_size": [
+                    1,
+                    1
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    41,
+                    0
+                  ],
+                  "uv_size": [
+                    1,
+                    1
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    42,
+                    1
+                  ],
+                  "uv_size": [
+                    1,
+                    -1
                   ]
                 }
               }

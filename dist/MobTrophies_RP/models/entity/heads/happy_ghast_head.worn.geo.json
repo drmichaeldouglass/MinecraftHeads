@@ -7,7 +7,7 @@
         "texture_width": 64,
         "texture_height": 64,
         "visible_bounds_width": 3,
-        "visible_bounds_height": 3.171875,
+        "visible_bounds_height": 3.09375,
         "visible_bounds_offset": [
           0,
           1.5,
@@ -43,14 +43,14 @@
           "cubes": [
             {
               "origin": [
-                -5.625,
+                -5.0,
                 23.5,
-                -5.625
+                -5.0
               ],
               "size": [
-                11.25,
-                11.25,
-                11.25
+                10.0,
+                10.0,
+                10.0
               ],
               "uv": {
                 "north": {

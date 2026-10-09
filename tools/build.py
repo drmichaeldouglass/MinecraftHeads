@@ -56,7 +56,7 @@ ART_KEYS = {"front": "north", "back": "south", "side": "east", "top": "up", "bot
 # Worn heads are scaled so they cover the player's 8x8x8 head with a little
 # room to spare, like the vanilla skulls do.
 WEAR_COVER = 9.0
-WEAR_MIN_SCALE = 1.125
+WEAR_MIN_SCALE = 1.0
 WEAR_MAX_SCALE = 2.25
 PLAYER_HEAD_PIVOT = [0, 24, 0]
 PLAYER_HEAD_BOTTOM = 23.5

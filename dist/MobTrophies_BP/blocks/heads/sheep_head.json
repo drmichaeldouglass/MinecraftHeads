@@ -36,24 +36,24 @@
         "origin": [
           -4.0,
           0,
-          -4.0
+          -3.5
         ],
         "size": [
           8,
           8,
-          8
+          7
         ]
       },
       "minecraft:selection_box": {
         "origin": [
           -4.0,
           0,
-          -4.0
+          -3.5
         ],
         "size": [
           8,
           8,
-          8
+          7
         ]
       },
       "minecraft:destructible_by_mining": {
@@ -63,7 +63,7 @@
         "explosion_resistance": 1
       },
       "minecraft:light_dampening": 0,
-      "minecraft:map_color": "#d9b896",
+      "minecraft:map_color": "#e9ecec",
       "tag:mh_trophy": {}
     },
     "permutations": [
@@ -100,24 +100,24 @@
             "origin": [
               -4.0,
               8,
-              -4.0
+              -3.5
             ],
             "size": [
               8,
               8,
-              8
+              7
             ]
           },
           "minecraft:selection_box": {
             "origin": [
               -4.0,
               8,
-              -4.0
+              -3.5
             ],
             "size": [
               8,
               8,
-              8
+              7
             ]
           },
           "minecraft:transformation": {
@@ -150,24 +150,24 @@
             "origin": [
               -4.0,
               4.0,
-              0.0
+              1.0
             ],
             "size": [
               8,
               8,
-              8
+              7
             ]
           },
           "minecraft:selection_box": {
             "origin": [
               -4.0,
               4.0,
-              0.0
+              1.0
             ],
             "size": [
               8,
               8,
-              8
+              7
             ]
           },
           "minecraft:transformation": {
@@ -212,24 +212,24 @@
             "origin": [
               -4.0,
               8,
-              -4.0
+              -3.5
             ],
             "size": [
               8,
               8,
-              8
+              7
             ]
           },
           "minecraft:selection_box": {
             "origin": [
               -4.0,
               8,
-              -4.0
+              -3.5
             ],
             "size": [
               8,
               8,
-              8
+              7
             ]
           },
           "minecraft:transformation": {
@@ -262,24 +262,24 @@
             "origin": [
               -4.0,
               4.0,
-              0.0
+              1.0
             ],
             "size": [
               8,
               8,
-              8
+              7
             ]
           },
           "minecraft:selection_box": {
             "origin": [
               -4.0,
               4.0,
-              0.0
+              1.0
             ],
             "size": [
               8,
               8,
-              8
+              7
             ]
           },
           "minecraft:transformation": {
@@ -324,24 +324,24 @@
             "origin": [
               -4.0,
               8,
-              -4.0
+              -3.5
             ],
             "size": [
               8,
               8,
-              8
+              7
             ]
           },
           "minecraft:selection_box": {
             "origin": [
               -4.0,
               8,
-              -4.0
+              -3.5
             ],
             "size": [
               8,
               8,
-              8
+              7
             ]
           },
           "minecraft:transformation": {
@@ -374,24 +374,24 @@
             "origin": [
               -4.0,
               4.0,
-              0.0
+              1.0
             ],
             "size": [
               8,
               8,
-              8
+              7
             ]
           },
           "minecraft:selection_box": {
             "origin": [
               -4.0,
               4.0,
-              0.0
+              1.0
             ],
             "size": [
               8,
               8,
-              8
+              7
             ]
           },
           "minecraft:transformation": {
@@ -436,24 +436,24 @@
             "origin": [
               -4.0,
               8,
-              -4.0
+              -3.5
             ],
             "size": [
               8,
               8,
-              8
+              7
             ]
           },
           "minecraft:selection_box": {
             "origin": [
               -4.0,
               8,
-              -4.0
+              -3.5
             ],
             "size": [
               8,
               8,
-              8
+              7
             ]
           },
           "minecraft:transformation": {
@@ -486,24 +486,24 @@
             "origin": [
               -4.0,
               4.0,
-              0.0
+              1.0
             ],
             "size": [
               8,
               8,
-              8
+              7
             ]
           },
           "minecraft:selection_box": {
             "origin": [
               -4.0,
               4.0,
-              0.0
+              1.0
             ],
             "size": [
               8,
               8,
-              8
+              7
             ]
           },
           "minecraft:transformation": {

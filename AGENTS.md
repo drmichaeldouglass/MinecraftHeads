@@ -16,7 +16,8 @@ python3 tools/build.py
 
 This counts as a change to the add-on:
 
-- `tools/mobs.py` (head art, sizes, palettes, extra cubes, mob list)
+- `tools/mobs.py` (data model, helpers, vanilla heads, mob list)
+- `tools/art/*.py` (head art, sizes, palettes, extra cubes, variants)
 - `tools/build.py` (block, geometry, texture, manifest or packaging logic)
 - `src/scripts/main.js` (the hand-written game script; the build copies it
   into `dist/`, so the packs and `.mcaddon` are stale until you rebuild)
@@ -40,7 +41,7 @@ GitHub onto a phone or tablet.
 ## Do not edit generated files
 
 `dist/` is deleted and recreated on every build, so any edit made there is
-lost. Make changes in `tools/mobs.py`, `tools/build.py` or
+lost. Make changes in `tools/mobs.py`, `tools/art/`, `tools/build.py` or
 `src/scripts/main.js` instead.
 
 ## Setup

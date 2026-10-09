@@ -40,7 +40,7 @@
         ],
         "size": [
           6,
-          6,
+          5,
           6
         ]
       },
@@ -52,7 +52,7 @@
         ],
         "size": [
           6,
-          6,
+          5,
           6
         ]
       },
@@ -63,7 +63,7 @@
         "explosion_resistance": 1
       },
       "minecraft:light_dampening": 0,
-      "minecraft:map_color": "#d6d3c4",
+      "minecraft:map_color": "#d9d5c4",
       "tag:mh_trophy": {}
     },
     "permutations": [
@@ -104,7 +104,7 @@
             ],
             "size": [
               6,
-              6,
+              5,
               6
             ]
           },
@@ -116,7 +116,7 @@
             ],
             "size": [
               6,
-              6,
+              5,
               6
             ]
           },
@@ -149,24 +149,24 @@
           "minecraft:collision_box": {
             "origin": [
               -3.0,
-              5.0,
+              5.5,
               2.0
             ],
             "size": [
               6,
-              6,
+              5,
               6
             ]
           },
           "minecraft:selection_box": {
             "origin": [
               -3.0,
-              5.0,
+              5.5,
               2.0
             ],
             "size": [
               6,
-              6,
+              5,
               6
             ]
           },
@@ -216,7 +216,7 @@
             ],
             "size": [
               6,
-              6,
+              5,
               6
             ]
           },
@@ -228,7 +228,7 @@
             ],
             "size": [
               6,
-              6,
+              5,
               6
             ]
           },
@@ -261,24 +261,24 @@
           "minecraft:collision_box": {
             "origin": [
               -3.0,
-              5.0,
+              5.5,
               2.0
             ],
             "size": [
               6,
-              6,
+              5,
               6
             ]
           },
           "minecraft:selection_box": {
             "origin": [
               -3.0,
-              5.0,
+              5.5,
               2.0
             ],
             "size": [
               6,
-              6,
+              5,
               6
             ]
           },
@@ -328,7 +328,7 @@
             ],
             "size": [
               6,
-              6,
+              5,
               6
             ]
           },
@@ -340,7 +340,7 @@
             ],
             "size": [
               6,
-              6,
+              5,
               6
             ]
           },
@@ -373,24 +373,24 @@
           "minecraft:collision_box": {
             "origin": [
               -3.0,
-              5.0,
+              5.5,
               2.0
             ],
             "size": [
               6,
-              6,
+              5,
               6
             ]
           },
           "minecraft:selection_box": {
             "origin": [
               -3.0,
-              5.0,
+              5.5,
               2.0
             ],
             "size": [
               6,
-              6,
+              5,
               6
             ]
           },
@@ -440,7 +440,7 @@
             ],
             "size": [
               6,
-              6,
+              5,
               6
             ]
           },
@@ -452,7 +452,7 @@
             ],
             "size": [
               6,
-              6,
+              5,
               6
             ]
           },
@@ -485,24 +485,24 @@
           "minecraft:collision_box": {
             "origin": [
               -3.0,
-              5.0,
+              5.5,
               2.0
             ],
             "size": [
               6,
-              6,
+              5,
               6
             ]
           },
           "minecraft:selection_box": {
             "origin": [
               -3.0,
-              5.0,
+              5.5,
               2.0
             ],
             "size": [
               6,
-              6,
+              5,
               6
             ]
           },

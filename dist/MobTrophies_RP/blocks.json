@@ -139,7 +139,16 @@
   "mh:mooshroom_head": {
     "sound": "stone"
   },
+  "mh:mooshroom_brown_head": {
+    "sound": "stone"
+  },
   "mh:mule_head": {
+    "sound": "stone"
+  },
+  "mh:skeleton_horse_head": {
+    "sound": "stone"
+  },
+  "mh:zombie_horse_head": {
     "sound": "stone"
   },
   "mh:nautilus_head": {
@@ -151,10 +160,43 @@
   "mh:parrot_head": {
     "sound": "stone"
   },
+  "mh:parrot_blue_head": {
+    "sound": "stone"
+  },
+  "mh:parrot_green_head": {
+    "sound": "stone"
+  },
+  "mh:parrot_cyan_head": {
+    "sound": "stone"
+  },
+  "mh:parrot_gray_head": {
+    "sound": "stone"
+  },
   "mh:pig_head": {
     "sound": "stone"
   },
+  "mh:pig_warm_head": {
+    "sound": "stone"
+  },
+  "mh:pig_cold_head": {
+    "sound": "stone"
+  },
   "mh:rabbit_head": {
+    "sound": "stone"
+  },
+  "mh:rabbit_white_head": {
+    "sound": "stone"
+  },
+  "mh:rabbit_black_head": {
+    "sound": "stone"
+  },
+  "mh:rabbit_black_and_white_head": {
+    "sound": "stone"
+  },
+  "mh:rabbit_gold_head": {
+    "sound": "stone"
+  },
+  "mh:rabbit_salt_and_pepper_head": {
     "sound": "stone"
   },
   "mh:salmon_head": {
@@ -163,7 +205,49 @@
   "mh:sheep_head": {
     "sound": "stone"
   },
-  "mh:skeleton_horse_head": {
+  "mh:sheep_orange_head": {
+    "sound": "stone"
+  },
+  "mh:sheep_magenta_head": {
+    "sound": "stone"
+  },
+  "mh:sheep_light_blue_head": {
+    "sound": "stone"
+  },
+  "mh:sheep_yellow_head": {
+    "sound": "stone"
+  },
+  "mh:sheep_lime_head": {
+    "sound": "stone"
+  },
+  "mh:sheep_pink_head": {
+    "sound": "stone"
+  },
+  "mh:sheep_gray_head": {
+    "sound": "stone"
+  },
+  "mh:sheep_light_gray_head": {
+    "sound": "stone"
+  },
+  "mh:sheep_cyan_head": {
+    "sound": "stone"
+  },
+  "mh:sheep_purple_head": {
+    "sound": "stone"
+  },
+  "mh:sheep_blue_head": {
+    "sound": "stone"
+  },
+  "mh:sheep_brown_head": {
+    "sound": "stone"
+  },
+  "mh:sheep_green_head": {
+    "sound": "stone"
+  },
+  "mh:sheep_red_head": {
+    "sound": "stone"
+  },
+  "mh:sheep_black_head": {
     "sound": "stone"
   },
   "mh:sniffer_head": {
@@ -184,16 +268,64 @@
   "mh:tropicalfish_head": {
     "sound": "stone"
   },
+  "mh:tropicalfish_sunstreak_head": {
+    "sound": "stone"
+  },
+  "mh:tropicalfish_snooper_head": {
+    "sound": "stone"
+  },
+  "mh:tropicalfish_dasher_head": {
+    "sound": "stone"
+  },
+  "mh:tropicalfish_brinely_head": {
+    "sound": "stone"
+  },
+  "mh:tropicalfish_spotty_head": {
+    "sound": "stone"
+  },
+  "mh:tropicalfish_flopper_head": {
+    "sound": "stone"
+  },
+  "mh:tropicalfish_stripey_head": {
+    "sound": "stone"
+  },
+  "mh:tropicalfish_glitter_head": {
+    "sound": "stone"
+  },
+  "mh:tropicalfish_blockfish_head": {
+    "sound": "stone"
+  },
+  "mh:tropicalfish_betty_head": {
+    "sound": "stone"
+  },
+  "mh:tropicalfish_clayfish_head": {
+    "sound": "stone"
+  },
   "mh:turtle_head": {
     "sound": "stone"
   },
   "mh:villager_head": {
     "sound": "stone"
   },
-  "mh:wandering_trader_head": {
+  "mh:villager_desert_head": {
     "sound": "stone"
   },
-  "mh:zombie_horse_head": {
+  "mh:villager_jungle_head": {
+    "sound": "stone"
+  },
+  "mh:villager_savanna_head": {
+    "sound": "stone"
+  },
+  "mh:villager_snow_head": {
+    "sound": "stone"
+  },
+  "mh:villager_swamp_head": {
+    "sound": "stone"
+  },
+  "mh:villager_taiga_head": {
+    "sound": "stone"
+  },
+  "mh:wandering_trader_head": {
     "sound": "stone"
   },
   "mh:sulfur_cube_head": {

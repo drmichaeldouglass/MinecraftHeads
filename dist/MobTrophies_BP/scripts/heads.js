@@ -614,9 +614,19 @@ export const MOBS = [
     "heads": [
       {
         "key": "mooshroom",
-        "name": "Mooshroom Head",
+        "name": "Red Mooshroom Head",
         "item": "mh:mooshroom_head",
-        "match": {}
+        "match": {
+          "variant": 0
+        }
+      },
+      {
+        "key": "mooshroom_brown",
+        "name": "Brown Mooshroom Head",
+        "item": "mh:mooshroom_brown_head",
+        "match": {
+          "variant": 1
+        }
       }
     ]
   },
@@ -633,6 +643,40 @@ export const MOBS = [
         "key": "mule",
         "name": "Mule Head",
         "item": "mh:mule_head",
+        "match": {}
+      }
+    ]
+  },
+  {
+    "key": "skeleton_horse",
+    "name": "Skeleton Horse",
+    "category": "Passive",
+    "entities": [
+      "minecraft:skeleton_horse"
+    ],
+    "experimental": false,
+    "heads": [
+      {
+        "key": "skeleton_horse",
+        "name": "Skeleton Horse Head",
+        "item": "mh:skeleton_horse_head",
+        "match": {}
+      }
+    ]
+  },
+  {
+    "key": "zombie_horse",
+    "name": "Zombie Horse",
+    "category": "Passive",
+    "entities": [
+      "minecraft:zombie_horse"
+    ],
+    "experimental": false,
+    "heads": [
+      {
+        "key": "zombie_horse",
+        "name": "Zombie Horse Head",
+        "item": "mh:zombie_horse_head",
         "match": {}
       }
     ]
@@ -682,9 +726,43 @@ export const MOBS = [
     "heads": [
       {
         "key": "parrot",
-        "name": "Parrot Head",
+        "name": "Red Parrot Head",
         "item": "mh:parrot_head",
-        "match": {}
+        "match": {
+          "variant": 0
+        }
+      },
+      {
+        "key": "parrot_blue",
+        "name": "Blue Parrot Head",
+        "item": "mh:parrot_blue_head",
+        "match": {
+          "variant": 1
+        }
+      },
+      {
+        "key": "parrot_green",
+        "name": "Green Parrot Head",
+        "item": "mh:parrot_green_head",
+        "match": {
+          "variant": 2
+        }
+      },
+      {
+        "key": "parrot_cyan",
+        "name": "Cyan Parrot Head",
+        "item": "mh:parrot_cyan_head",
+        "match": {
+          "variant": 3
+        }
+      },
+      {
+        "key": "parrot_gray",
+        "name": "Gray Parrot Head",
+        "item": "mh:parrot_gray_head",
+        "match": {
+          "variant": 4
+        }
       }
     ]
   },
@@ -701,7 +779,25 @@ export const MOBS = [
         "key": "pig",
         "name": "Pig Head",
         "item": "mh:pig_head",
-        "match": {}
+        "match": {
+          "minecraft:climate_variant": "temperate"
+        }
+      },
+      {
+        "key": "pig_warm",
+        "name": "Warm Pig Head",
+        "item": "mh:pig_warm_head",
+        "match": {
+          "minecraft:climate_variant": "warm"
+        }
+      },
+      {
+        "key": "pig_cold",
+        "name": "Cold Pig Head",
+        "item": "mh:pig_cold_head",
+        "match": {
+          "minecraft:climate_variant": "cold"
+        }
       }
     ]
   },
@@ -716,9 +812,51 @@ export const MOBS = [
     "heads": [
       {
         "key": "rabbit",
-        "name": "Rabbit Head",
+        "name": "Brown Rabbit Head",
         "item": "mh:rabbit_head",
-        "match": {}
+        "match": {
+          "variant": 0
+        }
+      },
+      {
+        "key": "rabbit_white",
+        "name": "White Rabbit Head",
+        "item": "mh:rabbit_white_head",
+        "match": {
+          "variant": 1
+        }
+      },
+      {
+        "key": "rabbit_black",
+        "name": "Black Rabbit Head",
+        "item": "mh:rabbit_black_head",
+        "match": {
+          "variant": 2
+        }
+      },
+      {
+        "key": "rabbit_black_and_white",
+        "name": "Black and White Rabbit Head",
+        "item": "mh:rabbit_black_and_white_head",
+        "match": {
+          "variant": 3
+        }
+      },
+      {
+        "key": "rabbit_gold",
+        "name": "Gold Rabbit Head",
+        "item": "mh:rabbit_gold_head",
+        "match": {
+          "variant": 4
+        }
+      },
+      {
+        "key": "rabbit_salt_and_pepper",
+        "name": "Salt and Pepper Rabbit Head",
+        "item": "mh:rabbit_salt_and_pepper_head",
+        "match": {
+          "variant": 5
+        }
       }
     ]
   },
@@ -750,26 +888,131 @@ export const MOBS = [
     "heads": [
       {
         "key": "sheep",
-        "name": "Sheep Head",
+        "name": "White Sheep Head",
         "item": "mh:sheep_head",
-        "match": {}
-      }
-    ]
-  },
-  {
-    "key": "skeleton_horse",
-    "name": "Skeleton Horse",
-    "category": "Passive",
-    "entities": [
-      "minecraft:skeleton_horse"
-    ],
-    "experimental": false,
-    "heads": [
+        "match": {
+          "color": 0
+        }
+      },
       {
-        "key": "skeleton_horse",
-        "name": "Skeleton Horse Head",
-        "item": "mh:skeleton_horse_head",
-        "match": {}
+        "key": "sheep_orange",
+        "name": "Orange Sheep Head",
+        "item": "mh:sheep_orange_head",
+        "match": {
+          "color": 1
+        }
+      },
+      {
+        "key": "sheep_magenta",
+        "name": "Magenta Sheep Head",
+        "item": "mh:sheep_magenta_head",
+        "match": {
+          "color": 2
+        }
+      },
+      {
+        "key": "sheep_light_blue",
+        "name": "Light Blue Sheep Head",
+        "item": "mh:sheep_light_blue_head",
+        "match": {
+          "color": 3
+        }
+      },
+      {
+        "key": "sheep_yellow",
+        "name": "Yellow Sheep Head",
+        "item": "mh:sheep_yellow_head",
+        "match": {
+          "color": 4
+        }
+      },
+      {
+        "key": "sheep_lime",
+        "name": "Lime Sheep Head",
+        "item": "mh:sheep_lime_head",
+        "match": {
+          "color": 5
+        }
+      },
+      {
+        "key": "sheep_pink",
+        "name": "Pink Sheep Head",
+        "item": "mh:sheep_pink_head",
+        "match": {
+          "color": 6
+        }
+      },
+      {
+        "key": "sheep_gray",
+        "name": "Gray Sheep Head",
+        "item": "mh:sheep_gray_head",
+        "match": {
+          "color": 7
+        }
+      },
+      {
+        "key": "sheep_light_gray",
+        "name": "Light Gray Sheep Head",
+        "item": "mh:sheep_light_gray_head",
+        "match": {
+          "color": 8
+        }
+      },
+      {
+        "key": "sheep_cyan",
+        "name": "Cyan Sheep Head",
+        "item": "mh:sheep_cyan_head",
+        "match": {
+          "color": 9
+        }
+      },
+      {
+        "key": "sheep_purple",
+        "name": "Purple Sheep Head",
+        "item": "mh:sheep_purple_head",
+        "match": {
+          "color": 10
+        }
+      },
+      {
+        "key": "sheep_blue",
+        "name": "Blue Sheep Head",
+        "item": "mh:sheep_blue_head",
+        "match": {
+          "color": 11
+        }
+      },
+      {
+        "key": "sheep_brown",
+        "name": "Brown Sheep Head",
+        "item": "mh:sheep_brown_head",
+        "match": {
+          "color": 12
+        }
+      },
+      {
+        "key": "sheep_green",
+        "name": "Green Sheep Head",
+        "item": "mh:sheep_green_head",
+        "match": {
+          "color": 13
+        }
+      },
+      {
+        "key": "sheep_red",
+        "name": "Red Sheep Head",
+        "item": "mh:sheep_red_head",
+        "match": {
+          "color": 14
+        }
+      },
+      {
+        "key": "sheep_black",
+        "name": "Black Sheep Head",
+        "item": "mh:sheep_black_head",
+        "match": {
+          "color": 15
+        }
       }
     ]
   },
@@ -869,9 +1112,111 @@ export const MOBS = [
     "heads": [
       {
         "key": "tropicalfish",
-        "name": "Tropical Fish Head",
+        "name": "Kob Tropical Fish Head",
         "item": "mh:tropicalfish_head",
-        "match": {}
+        "match": {
+          "variant": 0,
+          "mark_variant": 0
+        }
+      },
+      {
+        "key": "tropicalfish_sunstreak",
+        "name": "Sunstreak Tropical Fish Head",
+        "item": "mh:tropicalfish_sunstreak_head",
+        "match": {
+          "variant": 0,
+          "mark_variant": 1
+        }
+      },
+      {
+        "key": "tropicalfish_snooper",
+        "name": "Snooper Tropical Fish Head",
+        "item": "mh:tropicalfish_snooper_head",
+        "match": {
+          "variant": 0,
+          "mark_variant": 2
+        }
+      },
+      {
+        "key": "tropicalfish_dasher",
+        "name": "Dasher Tropical Fish Head",
+        "item": "mh:tropicalfish_dasher_head",
+        "match": {
+          "variant": 0,
+          "mark_variant": 3
+        }
+      },
+      {
+        "key": "tropicalfish_brinely",
+        "name": "Brinely Tropical Fish Head",
+        "item": "mh:tropicalfish_brinely_head",
+        "match": {
+          "variant": 0,
+          "mark_variant": 4
+        }
+      },
+      {
+        "key": "tropicalfish_spotty",
+        "name": "Spotty Tropical Fish Head",
+        "item": "mh:tropicalfish_spotty_head",
+        "match": {
+          "variant": 0,
+          "mark_variant": 5
+        }
+      },
+      {
+        "key": "tropicalfish_flopper",
+        "name": "Flopper Tropical Fish Head",
+        "item": "mh:tropicalfish_flopper_head",
+        "match": {
+          "variant": 1,
+          "mark_variant": 0
+        }
+      },
+      {
+        "key": "tropicalfish_stripey",
+        "name": "Stripey Tropical Fish Head",
+        "item": "mh:tropicalfish_stripey_head",
+        "match": {
+          "variant": 1,
+          "mark_variant": 1
+        }
+      },
+      {
+        "key": "tropicalfish_glitter",
+        "name": "Glitter Tropical Fish Head",
+        "item": "mh:tropicalfish_glitter_head",
+        "match": {
+          "variant": 1,
+          "mark_variant": 2
+        }
+      },
+      {
+        "key": "tropicalfish_blockfish",
+        "name": "Blockfish Tropical Fish Head",
+        "item": "mh:tropicalfish_blockfish_head",
+        "match": {
+          "variant": 1,
+          "mark_variant": 3
+        }
+      },
+      {
+        "key": "tropicalfish_betty",
+        "name": "Betty Tropical Fish Head",
+        "item": "mh:tropicalfish_betty_head",
+        "match": {
+          "variant": 1,
+          "mark_variant": 4
+        }
+      },
+      {
+        "key": "tropicalfish_clayfish",
+        "name": "Clayfish Tropical Fish Head",
+        "item": "mh:tropicalfish_clayfish_head",
+        "match": {
+          "variant": 1,
+          "mark_variant": 5
+        }
       }
     ]
   },
@@ -904,9 +1249,59 @@ export const MOBS = [
     "heads": [
       {
         "key": "villager",
-        "name": "Villager Head",
+        "name": "Plains Villager Head",
         "item": "mh:villager_head",
-        "match": {}
+        "match": {
+          "mark_variant": 0
+        }
+      },
+      {
+        "key": "villager_desert",
+        "name": "Desert Villager Head",
+        "item": "mh:villager_desert_head",
+        "match": {
+          "mark_variant": 1
+        }
+      },
+      {
+        "key": "villager_jungle",
+        "name": "Jungle Villager Head",
+        "item": "mh:villager_jungle_head",
+        "match": {
+          "mark_variant": 2
+        }
+      },
+      {
+        "key": "villager_savanna",
+        "name": "Savanna Villager Head",
+        "item": "mh:villager_savanna_head",
+        "match": {
+          "mark_variant": 3
+        }
+      },
+      {
+        "key": "villager_snow",
+        "name": "Snowy Villager Head",
+        "item": "mh:villager_snow_head",
+        "match": {
+          "mark_variant": 4
+        }
+      },
+      {
+        "key": "villager_swamp",
+        "name": "Swamp Villager Head",
+        "item": "mh:villager_swamp_head",
+        "match": {
+          "mark_variant": 5
+        }
+      },
+      {
+        "key": "villager_taiga",
+        "name": "Taiga Villager Head",
+        "item": "mh:villager_taiga_head",
+        "match": {
+          "mark_variant": 6
+        }
       }
     ]
   },
@@ -923,23 +1318,6 @@ export const MOBS = [
         "key": "wandering_trader",
         "name": "Wandering Trader Head",
         "item": "mh:wandering_trader_head",
-        "match": {}
-      }
-    ]
-  },
-  {
-    "key": "zombie_horse",
-    "name": "Zombie Horse",
-    "category": "Passive",
-    "entities": [
-      "minecraft:zombie_horse"
-    ],
-    "experimental": false,
-    "heads": [
-      {
-        "key": "zombie_horse",
-        "name": "Zombie Horse Head",
-        "item": "mh:zombie_horse_head",
         "match": {}
       }
     ]
