@@ -87,7 +87,9 @@ def quads_for(cube, tex, fwd, color=None):
         span_r = {"north": w, "south": w, "east": d, "west": d, "up": w}[face]
         span_d = {"north": h, "south": h, "east": h, "west": h, "up": d}[face]
         if color is not None:
-            cols, rows = 1, 1
+            # Split into unit squares too, so depth sorting against the
+            # head's texels stays correct.
+            cols, rows = max(1, round(span_r)), max(1, round(span_d))
         else:
             fu, fv = cube["uv"][face]["uv"]
             su, sv = cube["uv"][face]["uv_size"]

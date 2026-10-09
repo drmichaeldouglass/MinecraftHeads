@@ -797,7 +797,17 @@ export const MOBS = [
         "key": "fox",
         "name": "Fox Head",
         "item": "mh:fox_head",
-        "match": {}
+        "match": {
+          "variant": 0
+        }
+      },
+      {
+        "key": "fox_snow",
+        "name": "Snow Fox Head",
+        "item": "mh:fox_snow_head",
+        "match": {
+          "variant": 1
+        }
       }
     ]
   },
@@ -846,9 +856,35 @@ export const MOBS = [
     "heads": [
       {
         "key": "llama",
-        "name": "Llama Head",
+        "name": "Creamy Llama Head",
         "item": "mh:llama_head",
-        "match": {}
+        "match": {
+          "variant": 0
+        }
+      },
+      {
+        "key": "llama_white",
+        "name": "White Llama Head",
+        "item": "mh:llama_white_head",
+        "match": {
+          "variant": 1
+        }
+      },
+      {
+        "key": "llama_brown",
+        "name": "Brown Llama Head",
+        "item": "mh:llama_brown_head",
+        "match": {
+          "variant": 2
+        }
+      },
+      {
+        "key": "llama_gray",
+        "name": "Gray Llama Head",
+        "item": "mh:llama_gray_head",
+        "match": {
+          "variant": 3
+        }
       }
     ]
   },
@@ -863,9 +899,35 @@ export const MOBS = [
     "heads": [
       {
         "key": "trader_llama",
-        "name": "Trader Llama Head",
+        "name": "Creamy Trader Llama Head",
         "item": "mh:trader_llama_head",
-        "match": {}
+        "match": {
+          "variant": 0
+        }
+      },
+      {
+        "key": "trader_llama_white",
+        "name": "White Trader Llama Head",
+        "item": "mh:trader_llama_white_head",
+        "match": {
+          "variant": 1
+        }
+      },
+      {
+        "key": "trader_llama_brown",
+        "name": "Brown Trader Llama Head",
+        "item": "mh:trader_llama_brown_head",
+        "match": {
+          "variant": 2
+        }
+      },
+      {
+        "key": "trader_llama_gray",
+        "name": "Gray Trader Llama Head",
+        "item": "mh:trader_llama_gray_head",
+        "match": {
+          "variant": 3
+        }
       }
     ]
   },
@@ -882,7 +944,57 @@ export const MOBS = [
         "key": "panda",
         "name": "Panda Head",
         "item": "mh:panda_head",
-        "match": {}
+        "match": {
+          "variant": 0
+        }
+      },
+      {
+        "key": "panda_lazy",
+        "name": "Lazy Panda Head",
+        "item": "mh:panda_lazy_head",
+        "match": {
+          "variant": 1
+        }
+      },
+      {
+        "key": "panda_worried",
+        "name": "Worried Panda Head",
+        "item": "mh:panda_worried_head",
+        "match": {
+          "variant": 2
+        }
+      },
+      {
+        "key": "panda_playful",
+        "name": "Playful Panda Head",
+        "item": "mh:panda_playful_head",
+        "match": {
+          "variant": 3
+        }
+      },
+      {
+        "key": "panda_brown",
+        "name": "Brown Panda Head",
+        "item": "mh:panda_brown_head",
+        "match": {
+          "variant": 4
+        }
+      },
+      {
+        "key": "panda_weak",
+        "name": "Weak Panda Head",
+        "item": "mh:panda_weak_head",
+        "match": {
+          "variant": 5
+        }
+      },
+      {
+        "key": "panda_aggressive",
+        "name": "Aggressive Panda Head",
+        "item": "mh:panda_aggressive_head",
+        "match": {
+          "variant": 6
+        }
       }
     ]
   },
@@ -931,9 +1043,75 @@ export const MOBS = [
     "heads": [
       {
         "key": "wolf",
-        "name": "Wolf Head",
+        "name": "Pale Wolf Head",
         "item": "mh:wolf_head",
-        "match": {}
+        "match": {
+          "variant": 0
+        }
+      },
+      {
+        "key": "wolf_ashen",
+        "name": "Ashen Wolf Head",
+        "item": "mh:wolf_ashen_head",
+        "match": {
+          "variant": 1
+        }
+      },
+      {
+        "key": "wolf_black",
+        "name": "Black Wolf Head",
+        "item": "mh:wolf_black_head",
+        "match": {
+          "variant": 2
+        }
+      },
+      {
+        "key": "wolf_chestnut",
+        "name": "Chestnut Wolf Head",
+        "item": "mh:wolf_chestnut_head",
+        "match": {
+          "variant": 3
+        }
+      },
+      {
+        "key": "wolf_rusty",
+        "name": "Rusty Wolf Head",
+        "item": "mh:wolf_rusty_head",
+        "match": {
+          "variant": 4
+        }
+      },
+      {
+        "key": "wolf_snowy",
+        "name": "Snowy Wolf Head",
+        "item": "mh:wolf_snowy_head",
+        "match": {
+          "variant": 5
+        }
+      },
+      {
+        "key": "wolf_spotted",
+        "name": "Spotted Wolf Head",
+        "item": "mh:wolf_spotted_head",
+        "match": {
+          "variant": 6
+        }
+      },
+      {
+        "key": "wolf_striped",
+        "name": "Striped Wolf Head",
+        "item": "mh:wolf_striped_head",
+        "match": {
+          "variant": 7
+        }
+      },
+      {
+        "key": "wolf_woods",
+        "name": "Woods Wolf Head",
+        "item": "mh:wolf_woods_head",
+        "match": {
+          "variant": 8
+        }
       }
     ]
   },

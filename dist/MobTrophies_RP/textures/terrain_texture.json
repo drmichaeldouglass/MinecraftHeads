@@ -130,6 +130,9 @@
     "mh_fox_head": {
       "textures": "textures/blocks/heads/fox_head"
     },
+    "mh_fox_snow_head": {
+      "textures": "textures/blocks/heads/fox_snow_head"
+    },
     "mh_goat_head": {
       "textures": "textures/blocks/heads/goat_head"
     },
@@ -139,11 +142,47 @@
     "mh_llama_head": {
       "textures": "textures/blocks/heads/llama_head"
     },
+    "mh_llama_white_head": {
+      "textures": "textures/blocks/heads/llama_white_head"
+    },
+    "mh_llama_brown_head": {
+      "textures": "textures/blocks/heads/llama_brown_head"
+    },
+    "mh_llama_gray_head": {
+      "textures": "textures/blocks/heads/llama_gray_head"
+    },
     "mh_trader_llama_head": {
       "textures": "textures/blocks/heads/trader_llama_head"
     },
+    "mh_trader_llama_white_head": {
+      "textures": "textures/blocks/heads/trader_llama_white_head"
+    },
+    "mh_trader_llama_brown_head": {
+      "textures": "textures/blocks/heads/trader_llama_brown_head"
+    },
+    "mh_trader_llama_gray_head": {
+      "textures": "textures/blocks/heads/trader_llama_gray_head"
+    },
     "mh_panda_head": {
       "textures": "textures/blocks/heads/panda_head"
+    },
+    "mh_panda_lazy_head": {
+      "textures": "textures/blocks/heads/panda_lazy_head"
+    },
+    "mh_panda_worried_head": {
+      "textures": "textures/blocks/heads/panda_worried_head"
+    },
+    "mh_panda_playful_head": {
+      "textures": "textures/blocks/heads/panda_playful_head"
+    },
+    "mh_panda_brown_head": {
+      "textures": "textures/blocks/heads/panda_brown_head"
+    },
+    "mh_panda_weak_head": {
+      "textures": "textures/blocks/heads/panda_weak_head"
+    },
+    "mh_panda_aggressive_head": {
+      "textures": "textures/blocks/heads/panda_aggressive_head"
     },
     "mh_polar_bear_head": {
       "textures": "textures/blocks/heads/polar_bear_head"
@@ -153,6 +192,30 @@
     },
     "mh_wolf_head": {
       "textures": "textures/blocks/heads/wolf_head"
+    },
+    "mh_wolf_ashen_head": {
+      "textures": "textures/blocks/heads/wolf_ashen_head"
+    },
+    "mh_wolf_black_head": {
+      "textures": "textures/blocks/heads/wolf_black_head"
+    },
+    "mh_wolf_chestnut_head": {
+      "textures": "textures/blocks/heads/wolf_chestnut_head"
+    },
+    "mh_wolf_rusty_head": {
+      "textures": "textures/blocks/heads/wolf_rusty_head"
+    },
+    "mh_wolf_snowy_head": {
+      "textures": "textures/blocks/heads/wolf_snowy_head"
+    },
+    "mh_wolf_spotted_head": {
+      "textures": "textures/blocks/heads/wolf_spotted_head"
+    },
+    "mh_wolf_striped_head": {
+      "textures": "textures/blocks/heads/wolf_striped_head"
+    },
+    "mh_wolf_woods_head": {
+      "textures": "textures/blocks/heads/wolf_woods_head"
     },
     "mh_zombie_pigman_head": {
       "textures": "textures/blocks/heads/zombie_pigman_head"

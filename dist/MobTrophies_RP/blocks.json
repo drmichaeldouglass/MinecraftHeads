@@ -130,6 +130,9 @@
   "mh:fox_head": {
     "sound": "stone"
   },
+  "mh:fox_snow_head": {
+    "sound": "stone"
+  },
   "mh:goat_head": {
     "sound": "stone"
   },
@@ -139,10 +142,46 @@
   "mh:llama_head": {
     "sound": "stone"
   },
+  "mh:llama_white_head": {
+    "sound": "stone"
+  },
+  "mh:llama_brown_head": {
+    "sound": "stone"
+  },
+  "mh:llama_gray_head": {
+    "sound": "stone"
+  },
   "mh:trader_llama_head": {
     "sound": "stone"
   },
+  "mh:trader_llama_white_head": {
+    "sound": "stone"
+  },
+  "mh:trader_llama_brown_head": {
+    "sound": "stone"
+  },
+  "mh:trader_llama_gray_head": {
+    "sound": "stone"
+  },
   "mh:panda_head": {
+    "sound": "stone"
+  },
+  "mh:panda_lazy_head": {
+    "sound": "stone"
+  },
+  "mh:panda_worried_head": {
+    "sound": "stone"
+  },
+  "mh:panda_playful_head": {
+    "sound": "stone"
+  },
+  "mh:panda_brown_head": {
+    "sound": "stone"
+  },
+  "mh:panda_weak_head": {
+    "sound": "stone"
+  },
+  "mh:panda_aggressive_head": {
     "sound": "stone"
   },
   "mh:polar_bear_head": {
@@ -152,6 +191,30 @@
     "sound": "stone"
   },
   "mh:wolf_head": {
+    "sound": "stone"
+  },
+  "mh:wolf_ashen_head": {
+    "sound": "stone"
+  },
+  "mh:wolf_black_head": {
+    "sound": "stone"
+  },
+  "mh:wolf_chestnut_head": {
+    "sound": "stone"
+  },
+  "mh:wolf_rusty_head": {
+    "sound": "stone"
+  },
+  "mh:wolf_snowy_head": {
+    "sound": "stone"
+  },
+  "mh:wolf_spotted_head": {
+    "sound": "stone"
+  },
+  "mh:wolf_striped_head": {
+    "sound": "stone"
+  },
+  "mh:wolf_woods_head": {
     "sound": "stone"
   },
   "mh:zombie_pigman_head": {

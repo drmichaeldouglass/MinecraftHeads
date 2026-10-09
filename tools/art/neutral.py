@@ -1,119 +1,771 @@
 """Head art: Neutral mobs.
 
 See tools/mobs.py for the coordinate system and the art conventions.
+Shapes follow the vanilla head models (head cube plus snouts, ears, horns,
+tusks and so on); rotated vanilla parts are approximated with straight cubes.
 """
 
 from mobs import K, W, Cube, V, add, pair, snout  # noqa: F401
 
 
-add("bee", "Bee Head", "Neutral", size=(7, 7, 7),
-    pal={".": "#f2c230", "k": "#1e1610", "b": "#5a3c1c"},
-    front=[".......",
+# --------------------------------------------------------------------------
+# Bee: the whole 7x7x10 body, with brown stripes wrapping round it, big
+# black eyes, bent antennae, glassy wings on top and a stinger at the back.
+# --------------------------------------------------------------------------
+add("bee", "Bee Head", "Neutral", size=(7, 7, 10),
+    pal={".": "#edc343", "Y": "#f8dc6c", "o": "#c99a22", "b": "#4a3220", "B": "#2e1f12",
+         "k": "#141414", "h": "#5d6378", "v": "#d6eef6", "V": "#9fc6d6", "S": "#3a3a3a"},
+    front=["YYYYYYY",
            ".......",
+           "kh...hk",
            "kk...kk",
            "kk...kk",
            ".......",
-           "bbbbbbb",
-           "......."],
-    side=["..kk.kk"] * 7,
-    extras=[Cube((-2, 7, -3), (1, 3, 1), "k"), Cube((1, 7, -3), (1, 3, 1), "k")])
+           "ooooooo"],
+    side=["YYbbYYbbYY",
+          "..bb..bb..",
+          "..bb..bb.k",
+          "..bb..bb.k",
+          "..bb..bb.k",
+          "..bb..bb..",
+          "ooBBooBBoo"],
+    top=["YYYYYYY",
+         ".Y...Y.",
+         "bbbbbbb",
+         "bbbbbbb",
+         ".Y.Y.Y.",
+         ".......",
+         "bbbbbbb",
+         "bbbbbbb",
+         "Y.Y.Y.Y",
+         "YYYYYYY"],
+    back=["YYYYYYY",
+          ".......",
+          ".......",
+          ".......",
+          ".......",
+          ".......",
+          "ooooooo"],
+    bottom=["ooooooo",
+            "ooooooo",
+            "BBBBBBB",
+            "BBBBBBB",
+            "ooooooo",
+            "ooooooo",
+            "BBBBBBB",
+            "BBBBBBB",
+            "ooooooo",
+            "ooooooo"],
+    extras=pair(-2, 7, -5, (1, 2, 1), "B")
+    + pair(-2, 9, -6, (1, 1, 2), "B")
+    + pair(-4, 7, -1, (3, 1, 5), "v",
+           faces={"top": ["V..", ".V.", "..V", ".V.", "V.."],
+                  "side": ["VVVVV"], "front": ["VVV"], "back": ["VVV"]})
+    + [Cube((-0.5, 3, 5), (1, 1, 2), "S", faces={"side": [".k"], "back": ["k"]})])
 
+# --------------------------------------------------------------------------
+# Dolphin: 8x7x6 head with a thin 2x2x4 beak, grey back and pale belly.
+# --------------------------------------------------------------------------
 add("dolphin", "Dolphin Head", "Neutral", size=(8, 7, 6),
-    pal={".": "#7d8fa3", "l": "#c2ccd6", "k": K},
-    front=["........", "........", "k......k", "........", "llllllll", "llllllll", "llllllll"],
-    extras=[snout((8, 7, 6), (4, 2, 4), 0, "l")])
+    pal={".": "#7b90a6", "d": "#5f7389", "D": "#4a5b6d", "l": "#c6d0da", "L": "#e1e7ed",
+         "k": "#141a20", "w": "#f4f6f8"},
+    front=["dddddddd",
+           "........",
+           "kw....wk",
+           "........",
+           "l......l",
+           "lll..lll",
+           "LLLLLLLL"],
+    side=["DDdddd",
+          "dd....",
+          ".....k",
+          "......",
+          "l....l",
+          "llllll",
+          "LLLLLL"],
+    top=["DDDDDDDD",
+         "DdddddDD",
+         "dd.dd.dd",
+         "..dDDd..",
+         "........",
+         "........"],
+    back=["DDDDDDDD",
+          "dddddddd",
+          "dd....dd",
+          "........",
+          "l......l",
+          "llllllll",
+          "LLLLLLLL"],
+    bottom_fill="L",
+    extras=[snout((8, 7, 6), (2, 2, 4), 0, ".",
+                  faces={"front": ["..", "ll"], "side": ["....", "llll"],
+                         "top": ["dd", "..", "..", ".."], "bottom": ["LL"] * 4})])
 
+# --------------------------------------------------------------------------
+# Enderman: 8x8x8 black head with glowing purple eyes.
+# --------------------------------------------------------------------------
 add("enderman", "Enderman Head", "Neutral",
-    pal={".": "#161616", "p": "#cc00fa", "m": "#e079fa"},
-    front=["........",
+    pal={".": "#161616", "s": "#212121", "S": "#0b0b0b", "p": "#cc00fa", "P": "#f0a6ff",
+         "m": "#8a1aa8"},
+    front=["s.s...s.",
            "........",
+           "..s.....",
            "........",
+           "mpP..Ppm",
            "........",
-           "mpp..ppm",
-           "........",
-           "........",
-           "........"])
+           "..S..S..",
+           "SSSSSSSS"],
+    side=["s...s..s",
+          "..s.....",
+          "........",
+          ".....s..",
+          "........",
+          "..s.....",
+          "........",
+          "SSSSSSSS"],
+    top=["s...s..s",
+         "..s.....",
+         ".....s..",
+         "s.......",
+         "...s..s.",
+         ".s......",
+         ".....s..",
+         "s..s...."],
+    back=["s..s...s",
+          "........",
+          ".s...s..",
+          "........",
+          "...s....",
+          "s.....s.",
+          "........",
+          "SSSSSSSS"])
 
-add("fox", "Fox Head", "Neutral", size=(8, 6, 6),
-    pal={".": "#e37c30", "w": "#f2ece2", "k": "#1a1a1a", "d": "#b95b1d"},
-    front=["dddddddd", "........", ".kk..kk.", "w......w", "ww....ww", "wwwwwwww"],
-    extras=[snout((8, 6, 6), (4, 2, 3), 0, "w", [".kk.", "...."])]
-    + pair(-4, 6, 0, (2, 2, 1), "d"))
+# --------------------------------------------------------------------------
+# Fox: 8x6x6 head, 4x2x3 muzzle, pointed black-tipped ears, white cheeks.
+# --------------------------------------------------------------------------
+FOX = (8, 6, 6)
+add("fox", "Fox Head", "Neutral", size=FOX,
+    pal={".": "#e37c30", "l": "#f09a4e", "d": "#c2611f", "D": "#8f4416",
+         "w": "#f4efe6", "W": "#d9d0c2", "k": "#1a1a1a"},
+    front=["dl....ld",
+           "........",
+           ".wk..kw.",
+           "w......w",
+           "ww....ww",
+           "wwwwwwww"],
+    side=["Dd..l.",
+          "d.....",
+          "......",
+          ".....w",
+          "d...ww",
+          "WWwwww"],
+    top=["DDDDDDDD",
+         "DdddddDD",
+         "d.dllD.d",
+         "...ll...",
+         ".l....l.",
+         "........"],
+    back=["DDDDDDDD",
+          "dddddddd",
+          "dd....dd",
+          "........",
+          "........",
+          "WWWWWWWW"],
+    bottom_fill="w",
+    extras=[snout(FOX, (4, 2, 3), 0, ".",
+                  faces={"front": [".kk.", "wwww"], "side": ["...", "www"],
+                         "top": ["....", ".ll.", ".kk."], "bottom": ["wwww"] * 3})]
+    + pair(-4, 6, -2, (2, 2, 1), ".",
+           faces={"front": ["kk", "Dw"], "side": ["k", "d"], "back": ["kk", "dd"],
+                  "top": ["kk"]}),
+    variants=[
+        V("red", "Fox Head", {"variant": 0}),
+        V("snow", "Snow Fox Head", {"variant": 1},
+          pal={".": "#ece9e3", "l": "#f9f8f5", "d": "#d3cec5", "D": "#b2aca1",
+               "w": "#ffffff", "W": "#dcd8d1", "k": "#2a2622"}),
+    ])
 
-add("goat", "Goat Head", "Neutral", size=(6, 6, 6),
-    pal={".": "#e2ddd2", "d": "#bcb5a5", "k": K, "h": "#8f8a80"},
-    front=["......", "......", "k....k", "......", "......", "......"],
-    extras=[snout((6, 6, 6), (4, 3, 3), 2, "d", ["....", "k..k", "...."]),
-            Cube((-1, 0, -5), (2, 2, 1), ".")]
-    + pair(-3, 6, 0, (1, 4, 1), "h"))
+# --------------------------------------------------------------------------
+# Goat: long face with a muzzle, side ears, two ridged horns and a beard.
+# --------------------------------------------------------------------------
+GOAT = (5, 7, 6)
+add("goat", "Goat Head", "Neutral", size=GOAT,
+    pal={".": "#e6e1d5", "s": "#cdc6b6", "S": "#a99f8e", "l": "#f5f2ea", "k": "#1d1a16",
+         "y": "#d8b25a", "h": "#a69a87", "H": "#7d7262", "L": "#c9bfac", "p": "#d9b3a4"},
+    front=["s.l.s",
+           ".....",
+           ".....",
+           ".....",
+           ".....",
+           "s...s",
+           "SsssS"],
+    side=["s.lss.",
+          "...yk.",
+          "......",
+          "......",
+          "s.....",
+          "ss....",
+          "SSsss."],
+    top=["sssss",
+         "s.l.s",
+         ".l.l.",
+         ".....",
+         ".....",
+         "l.l.l"],
+    back=["sssss",
+          "s.l.s",
+          ".....",
+          ".s.s.",
+          ".....",
+          "s...s",
+          "SSSSS"],
+    bottom_fill="s",
+    extras=[snout(GOAT, (5, 3, 4), 3, ".",
+                  faces={"front": ["l...l", ".k.k.", "sSSSs"],
+                         "side": ["l...", "....", "sSSS"],
+                         "top": ["s.s.s", ".....", "l.l.l", "....."],
+                         "bottom": ["sssss"] * 4}),
+            Cube((-0.5, 0, -5), (1, 3, 2), "s",
+                 faces={"front": [".", "S", "S"], "side": ["..", "S.", "SS"]})]
+    + pair(-5.5, 4, -1, (3, 2, 1), ".", faces={"front": ["s..", "Spp"], "top": ["l.."]})
+    + pair(-2.5, 7, -2, (2, 6, 2), "h",
+           faces={"front": ["LL", "hH", "Lh", "hH", "Lh", "HH"],
+                  "side": ["LL", "Hh", "hL", "Hh", "hL", "HH"],
+                  "back": ["LL", "Hh", "hL", "Hh", "hL", "HH"],
+                  "top": ["LL", "LL"]}))
 
-add("iron_golem", "Iron Golem Head", "Neutral", size=(8, 10, 8),
-    pal={".": "#cdc6bc", "d": "#9c958b", "k": "#2b2b2b", "r": "#b3202a", "g": "#4e7a2d"},
-    front=["........",
+# --------------------------------------------------------------------------
+# Iron golem: tall 8x10x8 head, heavy brow, long nose, cracks and vines.
+# --------------------------------------------------------------------------
+GOLEM = (8, 10, 8)
+add("iron_golem", "Iron Golem Head", "Neutral", size=GOLEM,
+    pal={".": "#d8d2c6", "l": "#ece8df", "s": "#bdb6a9", "S": "#8f887c", "c": "#a39b8e",
+         "k": "#2b2b2b", "r": "#b3202a", "g": "#5b8a35", "G": "#36581f"},
+    front=["lllllll.",
            "g.......",
-           ".dddddd.",
-           ".rk..kr.",
-           "g.......",
+           "G..c....",
+           ".SSSSSS.",
+           ".kr..rk.",
            "........",
-           "........",
-           "........",
-           "...dd..g",
-           "........"],
-    extras=[snout((8, 10, 8), (2, 4, 2), 2, "d")])
+           ".s......",
+           "....c...",
+           ".SS..SS.",
+           "ssssssss"],
+    side=["llllllll",
+          ".g......",
+          ".Gg.....",
+          "..g....S",
+          "..G.....",
+          "...c....",
+          "....c...",
+          "........",
+          "s......S",
+          "ssssssss"],
+    west=["llllllll",
+          "........",
+          "....c...",
+          "...c...S",
+          "..c.....",
+          "........",
+          "......g.",
+          ".....gG.",
+          "s.....g.",
+          "ssssssss"],
+    top=["l..l..l.",
+         ".g..l...",
+         "gGg...l.",
+         ".g...c..",
+         "l...c..l",
+         "...l....",
+         ".l....l.",
+         "l..l...."],
+    back=["llllllll",
+          "......g.",
+          "..c..gGg",
+          "...c..g.",
+          "...c....",
+          "....c...",
+          "........",
+          "........",
+          "s......s",
+          "ssssssss"],
+    bottom_fill="s",
+    extras=[snout(GOLEM, (2, 4, 2), 0, "s",
+                  faces={"front": ["ll", "..", "..", "SS"],
+                         "side": ["l.", "..", "..", "SS"],
+                         "top": ["ll", "ll"]})])
 
-LLAMA_EXTRAS = [snout((6, 6, 6), (4, 4, 4), 0)] + pair(-3, 6, 1, (2, 3, 1), ".")
+# --------------------------------------------------------------------------
+# Llama and trader llama: the top of the long neck as the head, a 4x4x4
+# muzzle and tall ears. The trader llama wears blue and gold decor.
+# --------------------------------------------------------------------------
+LLAMA = (8, 8, 6)
+LLAMA_PAL = {".": "#e6d6aa", "l": "#f4ead0", "d": "#c9b68a", "D": "#a8946a", "n": "#6b5a44",
+             "k": "#1a1a1a", "w": "#f8f8f8",
+             "b": "#2c56a8", "B": "#1d3b7a", "y": "#e3b23c", "Y": "#b38522", "r": "#b8302b"}
+LLAMA_COATS = {
+    "creamy": {".": "#e6d6aa", "l": "#f4ead0", "d": "#c9b68a", "D": "#a8946a", "n": "#6b5a44"},
+    "white": {".": "#ecebe6", "l": "#fbfbf8", "d": "#d0cec6", "D": "#b0ada4", "n": "#6e6863"},
+    "brown": {".": "#7c5737", "l": "#976c43", "d": "#5f4129", "D": "#45301d", "n": "#2b1d12"},
+    "gray": {".": "#8f8c86", "l": "#aaa79f", "d": "#72706a", "D": "#585550", "n": "#33302c"},
+}
 
-add("llama", "Llama Head", "Neutral", size=(6, 6, 6),
-    pal={".": "#e8dbb8", "d": "#c4b38a", "k": K},
-    front=["dddddd", "......", "k....k", "......", "......", "......"],
-    extras=LLAMA_EXTRAS)
 
-add("trader_llama", "Trader Llama Head", "Neutral", size=(6, 6, 6),
-    pal={".": "#e8dbb8", "d": "#c4b38a", "k": K, "b": "#2f5aa8", "y": "#e0b53a"},
-    front=["dddddd", "......", "k....k", "bbbbbb", "yyyyyy", "......"],
-    extras=LLAMA_EXTRAS)
+def llama(decor=False):
+    """Art and extras for a llama head; decor adds the trader's harness."""
+    if not decor:
+        art = dict(
+            front=["l.l..l.l",
+                   ".d....d.",
+                   "kd....dk",
+                   "k......k",
+                   "........",
+                   "........",
+                   ".l.d.l.d",
+                   "dDddDddD"],
+            side=["l.ll.l",
+                  ".....d",
+                  "d....k",
+                  ".....k",
+                  "..d...",
+                  "......",
+                  "l.d.l.",
+                  "dDddDd"],
+            top=["l.l..l.l",
+                 ".d..d..d",
+                 "l..l..l.",
+                 ".l..l...",
+                 "d..l..d.",
+                 ".l....l."],
+            back=["l.l..l.l",
+                  ".d..d...",
+                  "l...l.d.",
+                  "..d....l",
+                  "l...d...",
+                  ".l.l..d.",
+                  "d.d..l.d",
+                  "dDddDddD"])
+        muzzle = {"front": ["llll", "n..n", "....", ".nn."],
+                  "side": ["l...", "...n", "....", "dddd"],
+                  "top": ["d..d", "....", "l..l", "llll"],
+                  "bottom": ["dddd"] * 4}
+        ear = {"front": [".l.", "dDd", "dDd"], "side": [".l", "..", "d."],
+               "top": ["l.l", ".l."]}
+    else:
+        art = dict(
+            front=["yyyyyyyy",
+                   "bb....bb",
+                   "kb....bk",
+                   "k......k",
+                   "........",
+                   "y......y",
+                   "yyyyyyyy",
+                   "bBbBbBbB"],
+            side=["yyyyyy",
+                  ".b...d",
+                  "dby..k",
+                  ".b...k",
+                  ".by...",
+                  ".b....",
+                  "yyyyyy",
+                  "BbBbBb"],
+            top=["bbbbbbbb",
+                 "bbybbybb",
+                 "bbbbbbbb",
+                 "yyyyyyyy",
+                 "l..l..l.",
+                 ".l....l."],
+            back=["bbbbbbbb",
+                  "bybbbbyb",
+                  "bbbybbbb",
+                  "bbbbbbbb",
+                  "bybbbbyb",
+                  "bbbbybbb",
+                  "yyyyyyyy",
+                  "YrYrYrYr"])
+        muzzle = {"front": ["llll", "n..n", "....", ".nn."],
+                  "side": ["lb..", ".b.n", ".y..", "dbdd"],
+                  "top": ["d..d", "bbbb", "l..l", "llll"],
+                  "bottom": ["dbdd"] * 4}
+        ear = {"front": [".l.", "dDd", "yyy"], "side": [".l", "..", "yy"],
+               "top": ["l.l", ".l."], "back": ["...", "...", "yy."]}
+    extras = [snout(LLAMA, (4, 4, 4), 2, ".", faces=muzzle)]
+    extras += pair(-4, 8, -1, (3, 3, 2), ".", faces=ear)
+    return dict(size=LLAMA, extras=extras, bottom_fill="d", **art)
 
-add("panda", "Panda Head", "Neutral", size=(8, 7, 6),
-    pal={".": "#f2f0ec", "k": "#1a1a1a", "w": W},
-    front=["........", "........", ".kk..kk.", "kkw..wkk", ".kk..kk.", "........", "........"],
-    extras=[snout((8, 7, 6), (4, 2, 2), 0, ".", [".kk.", "...."])]
-    + pair(-4, 7, 0, (2, 2, 1), "k"))
 
-add("polar_bear", "Polar Bear Head", "Neutral", size=(8, 7, 6),
-    pal={".": "#f1f0ea", "k": K, "d": "#d8d6cc"},
-    front=["........", "........", ".k....k.", "........", "........", "........", "........"],
-    extras=[snout((8, 7, 6), (4, 3, 3), 0, "d", [".kk.", "....", "...."])]
-    + pair(-4, 7, 1, (2, 2, 1), "."))
+def llama_variants(mob):
+    return [V(coat, f"{coat.capitalize()} {mob} Head", {"variant": i}, pal=pal)
+            for i, (coat, pal) in enumerate(LLAMA_COATS.items())]
 
+
+add("llama", "Llama Head", "Neutral", pal=dict(LLAMA_PAL),
+    variants=llama_variants("Llama"), **llama())
+
+add("trader_llama", "Trader Llama Head", "Neutral", pal=dict(LLAMA_PAL),
+    variants=llama_variants("Trader Llama"), **llama(decor=True))
+
+# --------------------------------------------------------------------------
+# Panda: the big 13x10x9 head with a 7x5x2 muzzle, round black ears and
+# drooping black eye patches. Each personality changes the face.
+# --------------------------------------------------------------------------
+PANDA = (13, 10, 9)
+PANDA_TOP_ROWS = ["............l"]
+PANDA_LOW_ROWS = ["kkk.......kkk",
+                  "kk.........kk",
+                  "s...........s",
+                  ".............",
+                  "sssssssssssss"]
+PANDA_EYES = {
+    # rows 1 to 4 of the face (eye patches and eyes) per personality
+    "normal": ["..kkk...kkk..",
+               ".kkkkk.kkkkk.",
+               ".kkwek.kewkk.",
+               "kkkkkk.kkkkkk"],
+    "lazy": ["..kkk...kkk..",
+             ".kkkkk.kkkkk.",
+             ".kkhhk.khhkk.",
+             "kkkkkk.kkkkkk"],
+    "worried": ["....kk.kk....",
+                "..kkkk.kkkk..",
+                ".kkwek.kewkk.",
+                "kkkkk...kkkkk"],
+    "playful": ["..kkk...kkk..",
+                ".kkkkk.kkkkk.",
+                ".kwekk.kkewk.",
+                "kkkkkk.kkkkkk"],
+    "weak": ["..kkk...kkk..",
+             ".kkkkk.kkkkk.",
+             ".kkhek.kehkk.",
+             "kkkkkk.kkkkkk"],
+    "aggressive": [".kk.......kk.",
+                   ".kkkk...kkkk.",
+                   ".kkkwk.kwkkk.",
+                   "kkkkkk.kkkkkk"],
+}
+PANDA_MUZZLE = {
+    "normal": [".......", "..kkk..", "...k...", "..s.s..", "......."],
+    "lazy": [".......", "..kkk..", "...k...", "..sss..", "......."],
+    "worried": [".......", "..kkk..", "...k...", "...s...", "..s.s.."],
+    "playful": [".......", "..kkk..", "...k...", "..kpk..", "...p..."],
+    "weak": [".......", "..kkk..", "..gk...", "..g.s..", "..g...."],
+    "aggressive": [".......", "..kkk..", "...k...", "..sss..", ".s...s."],
+}
+
+
+def panda(mood="normal"):
+    """Face art and muzzle for a panda personality."""
+    return dict(
+        front=PANDA_TOP_ROWS + PANDA_EYES[mood] + PANDA_LOW_ROWS,
+        extras=[snout(PANDA, (7, 5, 2), 0, ".",
+                      faces={"front": PANDA_MUZZLE[mood], "side": ["..", "..", "..", "..", "ss"],
+                             "top": ["sssssss", "......."]})]
+        + pair(-8, 9, -1.5, (5, 4, 1), "k",
+               faces={"front": [".KKk.", "KKKKk", "KKKKk", ".kkk."],
+                      "back": [".kkk.", "kkkkk", "kkkkk", ".kkk."],
+                      "side": ["k", "K", "K", "k"], "top": [".kkk."]}),
+    )
+
+
+add("panda", "Panda Head", "Neutral", size=PANDA,
+    pal={".": "#f2f0ec", "l": "#ffffff", "s": "#d9d5ce", "k": "#1c1c1c", "K": "#3a3a3a",
+         "w": "#ffffff", "e": "#4a4a4a", "h": "#8a8a8a", "p": "#e57a8f", "g": "#9ccc4a"},
+    side=["l........",
+          ".........",
+          ".........",
+          ".........",
+          "........k",
+          "........k",
+          "........k",
+          "s........",
+          ".........",
+          "sssssssss"],
+    top=["s...........s",
+         ".............",
+         "....l...l....",
+         ".............",
+         ".............",
+         "..l.......l..",
+         ".............",
+         ".............",
+         "............."],
+    back=["l...........l",
+          ".............",
+          ".............",
+          "......s......",
+          ".............",
+          ".............",
+          ".............",
+          "s...........s",
+          "ss.........ss",
+          "sssssssssssss"],
+    bottom_fill="s",
+    variants=[
+        V("normal", "Panda Head", {"variant": 0}),
+        V("lazy", "Lazy Panda Head", {"variant": 1}, **panda("lazy")),
+        V("worried", "Worried Panda Head", {"variant": 2}, **panda("worried")),
+        V("playful", "Playful Panda Head", {"variant": 3}, **panda("playful")),
+        V("brown", "Brown Panda Head", {"variant": 4},
+          pal={".": "#ece4d8", "s": "#d2c6b4", "k": "#5e3a22", "K": "#7d5235",
+               "e": "#2e1c10"}),
+        V("weak", "Weak Panda Head", {"variant": 5}, **panda("weak")),
+        V("aggressive", "Aggressive Panda Head", {"variant": 6}, **panda("aggressive")),
+    ],
+    **panda())
+
+# --------------------------------------------------------------------------
+# Polar bear: 7x7x7 head, 5x3x3 snout with a black nose, small round ears.
+# --------------------------------------------------------------------------
+BEAR = (7, 7, 7)
+add("polar_bear", "Polar Bear Head", "Neutral", size=BEAR,
+    pal={".": "#f1f0ea", "l": "#fdfdfa", "s": "#dcdad0", "S": "#c4c1b4", "k": "#161616",
+         "n": "#2a2a2a"},
+    front=["l.l..l.",
+           ".......",
+           ".k...k.",
+           ".......",
+           "s.....s",
+           "s.....s",
+           "SsssssS"],
+    side=["s..l.l.",
+          ".......",
+          "......k",
+          ".s.....",
+          "......s",
+          "s....ss",
+          "SSsssss"],
+    top=["sssssss",
+         "s.l..ls",
+         ".l..l..",
+         "...l...",
+         "l.....l",
+         "..l.l..",
+         "......."],
+    back=["sssssss",
+          "s.....s",
+          "..l..l.",
+          ".......",
+          ".s...s.",
+          "s.....s",
+          "SSSSSSS"],
+    bottom_fill="s",
+    extras=[snout(BEAR, (5, 3, 3), 0, "s",
+                  faces={"front": [".nnn.", "..n..", "S...S"],
+                         "side": ["...", "...", "SSS"],
+                         "top": ["l...l", ".....", ".nnn."]})]
+    + pair(-4.5, 6, -1.5, (2, 2, 1), ".",
+           faces={"front": ["..", "Ss"], "side": [".", "s"], "top": ["l."]}))
+
+# --------------------------------------------------------------------------
+# Pufferfish: the puffed-up 8x8x8 body with spikes, fins and a pursed mouth.
+# --------------------------------------------------------------------------
 add("pufferfish", "Pufferfish Head", "Neutral",
-    pal={".": "#e8c33a", "d": "#b88f1c", "k": K, "w": "#f2f2f2"},
-    front=["d.d..d.d",
+    pal={".": "#e7c23a", "l": "#f5dc6a", "d": "#c49a22", "D": "#9c7414", "w": "#f3ecc9",
+         "W": "#ddd2a6", "k": "#151515", "e": "#fafafa", "m": "#b8642a", "f": "#d98a2b",
+         "F": "#a8621a", "p": "#f4ecc0"},
+    front=[".l....l.",
            "........",
-           "wk....kw",
+           "ek....ke",
+           "kk....kk",
            "........",
-           "...dd...",
-           "........",
-           "d......d",
-           "........"],
-    extras=pair(-5, 2, -1, (1, 1, 1), "w") + pair(-5, 6, -1, (1, 1, 1), "w")
-    + pair(-2, 8, -1, (1, 1, 1), "w"))
+           "d..mm..d",
+           "ww.mm.ww",
+           "wwwwwwww"],
+    side=[".l.l.l.l",
+          "d...d...",
+          "..d....e",
+          "......dk",
+          ".d..d...",
+          "........",
+          "wwwwwwww",
+          "WwWwWwWw"],
+    top=["l.d..l.d",
+         "..l.d...",
+         "d....l..",
+         ".l.d...l",
+         "...l.d..",
+         "d.l.....",
+         ".....l.d",
+         "l.l..l.."],
+    back=["l.l..l.l",
+          "..d...d.",
+          ".d..d...",
+          "....d.d.",
+          "d.d.....",
+          "...d..d.",
+          "wwwwwwww",
+          "WwWwWwWw"],
+    bottom_fill="w",
+    extras=[Cube((-3, 8, -3), (1, 1, 1), "p"), Cube((2, 8, -3), (1, 1, 1), "p"),
+            Cube((-3, 8, 2), (1, 1, 1), "p"), Cube((2, 8, 2), (1, 1, 1), "p"),
+            Cube((-0.5, 8, -0.5), (1, 1, 1), "p"),
+            Cube((-1, 3, 4), (2, 3, 1), "f", faces={"back": ["FF", "..", "FF"]})]
+    + pair(-5, 5, -2, (1, 1, 1), "p") + pair(-5, 1, 1, (1, 1, 1), "p")
+    + pair(-5, 2, -2, (1, 2, 2), "f", faces={"side": ["F.", ".F"]})
+    + pair(-4, 0, -5, (1, 1, 1), "p") + pair(-3, 5, 4, (1, 1, 1), "p"))
 
-add("wolf", "Wolf Head", "Neutral", size=(6, 6, 6),
-    pal={".": "#d6d1cb", "d": "#a9a39c", "k": "#222222", "l": "#e7e3de"},
-    front=["......", "......", "k....k", "......", "......", "......"],
-    extras=[snout((6, 6, 6), (3, 3, 4), 0, "l", [".k.", "...", "..."])]
-    + pair(-3, 6, 0, (2, 2, 1), "d"))
+# --------------------------------------------------------------------------
+# Wolf: 6x6x4 head, 3x3x3 snout and pointed ears, nine coat variants.
+# --------------------------------------------------------------------------
+WOLF = (6, 6, 4)
+WOLF_PLAIN = dict(
+    front=["d....d",
+           "dd..dd",
+           "ek..ke",
+           "......",
+           "l....l",
+           "ll..ll"],
+    side=["dd..",
+          "d...",
+          "...e",
+          "....",
+          "...l",
+          "Dlll"],
+    top=["dddddd",
+         "d.dd.d",
+         "......",
+         "......"],
+    back=["dddddd",
+          "dDddDd",
+          "d....d",
+          "......",
+          "......",
+          "DDDDDD"],
+)
+WOLF_SPOTTED = dict(
+    front=["dx...d",
+           "dd..xd",
+           "ek..ke",
+           "x.....",
+           "l....l",
+           "ll..ll"],
+    side=["xd.x",
+          "d...",
+          ".x.e",
+          "x...",
+          "...l",
+          "Dlll"],
+    top=["dxdddx",
+         "d.dd.d",
+         ".x..x.",
+         "...x.."],
+    back=["dddxdd",
+          "dxddDd",
+          "d...xd",
+          ".x....",
+          "...x..",
+          "DDDDDD"],
+)
+WOLF_STRIPED = dict(
+    front=["dx..xd",
+           "dd..dd",
+           "ek..ke",
+           "......",
+           "l....l",
+           "ll..ll"],
+    side=["x.x.",
+          "x.x.",
+          "x.xe",
+          "....",
+          "...l",
+          "Dlll"],
+    top=["xxxxxx",
+         "d.dd.d",
+         "xxxxxx",
+         ".x..x."],
+    back=["xxxxxx",
+          "dDddDd",
+          "xxxxxx",
+          "......",
+          "xxxxxx",
+          "DDDDDD"],
+)
+WOLF_COATS = {
+    "pale": {".": "#d3cec7", "l": "#efebe5", "d": "#aca59c", "D": "#878078"},
+    "ashen": {".": "#9a9ca0", "l": "#d8d8d8", "d": "#74777c", "D": "#575a5f"},
+    "black": {".": "#33312f", "l": "#77736f", "d": "#232120", "D": "#161514"},
+    "chestnut": {".": "#7b4a2c", "l": "#e3d2bd", "d": "#5c3520", "D": "#42261a"},
+    "rusty": {".": "#b8622b", "l": "#ead6be", "d": "#8f4720", "D": "#6b3518"},
+    "snowy": {".": "#f0eeea", "l": "#ffffff", "d": "#d6d2cb", "D": "#bdb7ae"},
+    "spotted": {".": "#d9c6a5", "l": "#f1e7d6", "d": "#b39a72", "D": "#8a7553", "x": "#5b4128"},
+    "striped": {".": "#c7a77a", "l": "#ecdcc2", "d": "#a0815a", "D": "#7a6141", "x": "#4f3b27"},
+    "woods": {".": "#5a4330", "l": "#b8a48a", "d": "#43301f", "D": "#2f2216"},
+}
+WOLF_MARKS = {"spotted": WOLF_SPOTTED, "striped": WOLF_STRIPED}
 
-add("zombie_pigman", "Zombified Piglin Head", "Neutral", size=(10, 8, 8),
-    pal={".": "#e39d95", "g": "#6a8a4a", "w": "#e8e2d0", "k": K, "n": "#c9877d", "d": "#a8645c"},
-    front=["g.......ww",
-           "........ww",
+add("wolf", "Wolf Head", "Neutral", size=WOLF,
+    pal={**WOLF_COATS["pale"], "x": "#5b4128", "k": "#1e1e1e", "e": "#f6f6f6",
+         "n": "#1e1e1e"},
+    bottom_fill="l",
+    extras=[snout(WOLF, (3, 3, 3), 0, ".",
+                  faces={"front": [".n.", "...", "lll"], "side": ["...", "...", "lll"],
+                         "top": ["d.d", "...", ".n."], "bottom": ["lll"] * 3})]
+    + pair(-3, 6, 0, (2, 2, 1), "d",
+           faces={"front": [".D", "DD"], "side": ["D", "."], "top": [".D"]}),
+    variants=[V(coat, f"{coat.capitalize()} Wolf Head", {"variant": i}, pal=pal,
+                **WOLF_MARKS.get(coat, {}))
+              for i, (coat, pal) in enumerate(WOLF_COATS.items())],
+    **WOLF_PLAIN)
+
+# --------------------------------------------------------------------------
+# Zombified piglin: wide 10x8x8 head, snout, tusks, floppy ears (one torn)
+# and rotting green patches with the skull showing through.
+# --------------------------------------------------------------------------
+PIGLIN = (10, 8, 8)
+add("zombie_pigman", "Zombified Piglin Head", "Neutral", size=PIGLIN,
+    pal={".": "#e3a197", "l": "#efb9b0", "d": "#c27d74", "D": "#9d5f57", "n": "#d98b81",
+         "N": "#6e3a35", "g": "#79a05a", "G": "#55773c", "B": "#ebe5d3", "b": "#c8c0aa",
+         "k": "#1c1c1c", "w": "#f0ead8"},
+    front=["BBb.......",
+           "Bbb..g....",
+           "b.....G...",
+           "bwk....kw.",
            "..........",
-           "..wk..kw.w",
-           "..........",
-           "........g.",
-           "..........",
-           "g........."],
-    extras=[snout((10, 8, 8), (4, 4, 1), 0, "n", ["....", "....", "d..d", "...."]),
-            Cube((2, 1, -5), (1, 2, 1), "w")]
-    + pair(-6, 3, -2, (1, 5, 4), "."))
+           "g.......G.",
+           ".g.......g",
+           "dd......dd"],
+    side=["....bBBB",
+          ".g...bBB",
+          "gGg...bb",
+          ".g......",
+          "......d.",
+          "...g....",
+          "........",
+          "dddddddd"],
+    west=["........",
+          "..g.....",
+          ".gGg....",
+          "..g.....",
+          ".....d..",
+          "g.......",
+          "Gg......",
+          "dddddddd"],
+    top=["........g.",
+         ".g......Gg",
+         "........g.",
+         "...g......",
+         "b.........",
+         "bB......g.",
+         "BBb.......",
+         "BBBb......"],
+    back=["..g.......",
+          ".gGg......",
+          "..g.....g.",
+          "......gGg.",
+          "...d....g.",
+          "g.........",
+          "Gg.......d",
+          "DDDDDDDDDD"],
+    bottom_fill="d",
+    extras=[snout(PIGLIN, (4, 4, 1), 0, "n",
+                  faces={"front": ["llll", "....", "N..N", "DddD"],
+                         "side": ["l", ".", ".", "d"], "top": ["llll"]}),
+            Cube((2, 0, -5), (1, 2, 1), "w", faces={"front": ["w", "b"], "side": ["b"] * 2}),
+            Cube((-3, 0, -5), (1, 2, 1), "w", faces={"front": ["w", "b"], "side": ["b"] * 2}),
+            # whole ear on the skull side, torn ear on the other
+            Cube((5, 1, -2), (1, 5, 4), ".",
+                 faces={"side": ["l..l", "..g.", ".gG.", "....", "dddd"],
+                        "front": ["l", ".", ".", ".", "d"], "back": ["l", ".", ".", ".", "d"]}),
+            Cube((-6, 3, -2), (1, 3, 4), ".",
+                 faces={"side": ["l..l", ".d..", "dDND"],
+                        "front": ["l", ".", "D"], "back": ["l", ".", "D"]})])
