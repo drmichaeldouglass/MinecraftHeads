@@ -358,11 +358,62 @@
     "mh_pillager_head": {
       "textures": "textures/blocks/heads/pillager_head"
     },
+    "mh_vindicator_head": {
+      "textures": "textures/blocks/heads/vindicator_head"
+    },
     "mh_ravager_head": {
       "textures": "textures/blocks/heads/ravager_head"
     },
     "mh_shulker_head": {
       "textures": "textures/blocks/heads/shulker_head"
+    },
+    "mh_shulker_black_head": {
+      "textures": "textures/blocks/heads/shulker_black_head"
+    },
+    "mh_shulker_red_head": {
+      "textures": "textures/blocks/heads/shulker_red_head"
+    },
+    "mh_shulker_green_head": {
+      "textures": "textures/blocks/heads/shulker_green_head"
+    },
+    "mh_shulker_brown_head": {
+      "textures": "textures/blocks/heads/shulker_brown_head"
+    },
+    "mh_shulker_blue_head": {
+      "textures": "textures/blocks/heads/shulker_blue_head"
+    },
+    "mh_shulker_purple_head": {
+      "textures": "textures/blocks/heads/shulker_purple_head"
+    },
+    "mh_shulker_cyan_head": {
+      "textures": "textures/blocks/heads/shulker_cyan_head"
+    },
+    "mh_shulker_light_gray_head": {
+      "textures": "textures/blocks/heads/shulker_light_gray_head"
+    },
+    "mh_shulker_gray_head": {
+      "textures": "textures/blocks/heads/shulker_gray_head"
+    },
+    "mh_shulker_pink_head": {
+      "textures": "textures/blocks/heads/shulker_pink_head"
+    },
+    "mh_shulker_lime_head": {
+      "textures": "textures/blocks/heads/shulker_lime_head"
+    },
+    "mh_shulker_yellow_head": {
+      "textures": "textures/blocks/heads/shulker_yellow_head"
+    },
+    "mh_shulker_light_blue_head": {
+      "textures": "textures/blocks/heads/shulker_light_blue_head"
+    },
+    "mh_shulker_magenta_head": {
+      "textures": "textures/blocks/heads/shulker_magenta_head"
+    },
+    "mh_shulker_orange_head": {
+      "textures": "textures/blocks/heads/shulker_orange_head"
+    },
+    "mh_shulker_white_head": {
+      "textures": "textures/blocks/heads/shulker_white_head"
     },
     "mh_silverfish_head": {
       "textures": "textures/blocks/heads/silverfish_head"
@@ -379,9 +430,6 @@
     "mh_vex_head": {
       "textures": "textures/blocks/heads/vex_head"
     },
-    "mh_vindicator_head": {
-      "textures": "textures/blocks/heads/vindicator_head"
-    },
     "mh_warden_head": {
       "textures": "textures/blocks/heads/warden_head"
     },
@@ -394,8 +442,29 @@
     "mh_zombie_nautilus_head": {
       "textures": "textures/blocks/heads/zombie_nautilus_head"
     },
+    "mh_zombie_nautilus_coral_head": {
+      "textures": "textures/blocks/heads/zombie_nautilus_coral_head"
+    },
     "mh_zombie_villager_head": {
       "textures": "textures/blocks/heads/zombie_villager_head"
+    },
+    "mh_zombie_villager_desert_head": {
+      "textures": "textures/blocks/heads/zombie_villager_desert_head"
+    },
+    "mh_zombie_villager_jungle_head": {
+      "textures": "textures/blocks/heads/zombie_villager_jungle_head"
+    },
+    "mh_zombie_villager_savanna_head": {
+      "textures": "textures/blocks/heads/zombie_villager_savanna_head"
+    },
+    "mh_zombie_villager_snow_head": {
+      "textures": "textures/blocks/heads/zombie_villager_snow_head"
+    },
+    "mh_zombie_villager_swamp_head": {
+      "textures": "textures/blocks/heads/zombie_villager_swamp_head"
+    },
+    "mh_zombie_villager_taiga_head": {
+      "textures": "textures/blocks/heads/zombie_villager_taiga_head"
     },
     "mh_wither_head": {
       "textures": "textures/blocks/heads/wither_head"

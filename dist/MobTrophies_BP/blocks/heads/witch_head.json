@@ -63,7 +63,7 @@
         "explosion_resistance": 1
       },
       "minecraft:light_dampening": 0,
-      "minecraft:map_color": "#a98c79",
+      "minecraft:map_color": "#a88a76",
       "tag:mh_trophy": {}
     },
     "permutations": [
@@ -150,7 +150,7 @@
             "origin": [
               -4.0,
               0,
-              0.0
+              -1.0
             ],
             "size": [
               8,
@@ -162,7 +162,7 @@
             "origin": [
               -4.0,
               0,
-              0.0
+              -1.0
             ],
             "size": [
               8,
@@ -262,7 +262,7 @@
             "origin": [
               -4.0,
               0,
-              0.0
+              -1.0
             ],
             "size": [
               8,
@@ -274,7 +274,7 @@
             "origin": [
               -4.0,
               0,
-              0.0
+              -1.0
             ],
             "size": [
               8,
@@ -374,7 +374,7 @@
             "origin": [
               -4.0,
               0,
-              0.0
+              -1.0
             ],
             "size": [
               8,
@@ -386,7 +386,7 @@
             "origin": [
               -4.0,
               0,
-              0.0
+              -1.0
             ],
             "size": [
               8,
@@ -486,7 +486,7 @@
             "origin": [
               -4.0,
               0,
-              0.0
+              -1.0
             ],
             "size": [
               8,
@@ -498,7 +498,7 @@
             "origin": [
               -4.0,
               0,
-              0.0
+              -1.0
             ],
             "size": [
               8,

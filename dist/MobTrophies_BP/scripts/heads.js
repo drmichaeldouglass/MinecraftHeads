@@ -1684,6 +1684,23 @@ export const MOBS = [
     ]
   },
   {
+    "key": "vindicator",
+    "name": "Vindicator",
+    "category": "Hostile",
+    "entities": [
+      "minecraft:vindicator"
+    ],
+    "experimental": false,
+    "heads": [
+      {
+        "key": "vindicator",
+        "name": "Vindicator Head",
+        "item": "mh:vindicator_head",
+        "match": {}
+      }
+    ]
+  },
+  {
     "key": "ravager",
     "name": "Ravager",
     "category": "Hostile",
@@ -1713,7 +1730,137 @@ export const MOBS = [
         "key": "shulker",
         "name": "Shulker Head",
         "item": "mh:shulker_head",
-        "match": {}
+        "match": {
+          "variant": 16
+        }
+      },
+      {
+        "key": "shulker_black",
+        "name": "Black Shulker Head",
+        "item": "mh:shulker_black_head",
+        "match": {
+          "variant": 0
+        }
+      },
+      {
+        "key": "shulker_red",
+        "name": "Red Shulker Head",
+        "item": "mh:shulker_red_head",
+        "match": {
+          "variant": 1
+        }
+      },
+      {
+        "key": "shulker_green",
+        "name": "Green Shulker Head",
+        "item": "mh:shulker_green_head",
+        "match": {
+          "variant": 2
+        }
+      },
+      {
+        "key": "shulker_brown",
+        "name": "Brown Shulker Head",
+        "item": "mh:shulker_brown_head",
+        "match": {
+          "variant": 3
+        }
+      },
+      {
+        "key": "shulker_blue",
+        "name": "Blue Shulker Head",
+        "item": "mh:shulker_blue_head",
+        "match": {
+          "variant": 4
+        }
+      },
+      {
+        "key": "shulker_purple",
+        "name": "Purple Shulker Head",
+        "item": "mh:shulker_purple_head",
+        "match": {
+          "variant": 5
+        }
+      },
+      {
+        "key": "shulker_cyan",
+        "name": "Cyan Shulker Head",
+        "item": "mh:shulker_cyan_head",
+        "match": {
+          "variant": 6
+        }
+      },
+      {
+        "key": "shulker_light_gray",
+        "name": "Light Gray Shulker Head",
+        "item": "mh:shulker_light_gray_head",
+        "match": {
+          "variant": 7
+        }
+      },
+      {
+        "key": "shulker_gray",
+        "name": "Gray Shulker Head",
+        "item": "mh:shulker_gray_head",
+        "match": {
+          "variant": 8
+        }
+      },
+      {
+        "key": "shulker_pink",
+        "name": "Pink Shulker Head",
+        "item": "mh:shulker_pink_head",
+        "match": {
+          "variant": 9
+        }
+      },
+      {
+        "key": "shulker_lime",
+        "name": "Lime Shulker Head",
+        "item": "mh:shulker_lime_head",
+        "match": {
+          "variant": 10
+        }
+      },
+      {
+        "key": "shulker_yellow",
+        "name": "Yellow Shulker Head",
+        "item": "mh:shulker_yellow_head",
+        "match": {
+          "variant": 11
+        }
+      },
+      {
+        "key": "shulker_light_blue",
+        "name": "Light Blue Shulker Head",
+        "item": "mh:shulker_light_blue_head",
+        "match": {
+          "variant": 12
+        }
+      },
+      {
+        "key": "shulker_magenta",
+        "name": "Magenta Shulker Head",
+        "item": "mh:shulker_magenta_head",
+        "match": {
+          "variant": 13
+        }
+      },
+      {
+        "key": "shulker_orange",
+        "name": "Orange Shulker Head",
+        "item": "mh:shulker_orange_head",
+        "match": {
+          "variant": 14
+        }
+      },
+      {
+        "key": "shulker_white",
+        "name": "White Shulker Head",
+        "item": "mh:shulker_white_head",
+        "match": {
+          "variant": 15
+        }
       }
     ]
   },
@@ -1803,23 +1950,6 @@ export const MOBS = [
     ]
   },
   {
-    "key": "vindicator",
-    "name": "Vindicator",
-    "category": "Hostile",
-    "entities": [
-      "minecraft:vindicator"
-    ],
-    "experimental": false,
-    "heads": [
-      {
-        "key": "vindicator",
-        "name": "Vindicator Head",
-        "item": "mh:vindicator_head",
-        "match": {}
-      }
-    ]
-  },
-  {
     "key": "warden",
     "name": "Warden",
     "category": "Hostile",
@@ -1883,7 +2013,17 @@ export const MOBS = [
         "key": "zombie_nautilus",
         "name": "Zombie Nautilus Head",
         "item": "mh:zombie_nautilus_head",
-        "match": {}
+        "match": {
+          "minecraft:variant": "default"
+        }
+      },
+      {
+        "key": "zombie_nautilus_coral",
+        "name": "Coral Zombie Nautilus Head",
+        "item": "mh:zombie_nautilus_coral_head",
+        "match": {
+          "minecraft:variant": "coral"
+        }
       }
     ]
   },
@@ -1899,9 +2039,59 @@ export const MOBS = [
     "heads": [
       {
         "key": "zombie_villager",
-        "name": "Zombie Villager Head",
+        "name": "Plains Zombie Villager Head",
         "item": "mh:zombie_villager_head",
-        "match": {}
+        "match": {
+          "mark_variant": 0
+        }
+      },
+      {
+        "key": "zombie_villager_desert",
+        "name": "Desert Zombie Villager Head",
+        "item": "mh:zombie_villager_desert_head",
+        "match": {
+          "mark_variant": 1
+        }
+      },
+      {
+        "key": "zombie_villager_jungle",
+        "name": "Jungle Zombie Villager Head",
+        "item": "mh:zombie_villager_jungle_head",
+        "match": {
+          "mark_variant": 2
+        }
+      },
+      {
+        "key": "zombie_villager_savanna",
+        "name": "Savanna Zombie Villager Head",
+        "item": "mh:zombie_villager_savanna_head",
+        "match": {
+          "mark_variant": 3
+        }
+      },
+      {
+        "key": "zombie_villager_snow",
+        "name": "Snowy Zombie Villager Head",
+        "item": "mh:zombie_villager_snow_head",
+        "match": {
+          "mark_variant": 4
+        }
+      },
+      {
+        "key": "zombie_villager_swamp",
+        "name": "Swamp Zombie Villager Head",
+        "item": "mh:zombie_villager_swamp_head",
+        "match": {
+          "mark_variant": 5
+        }
+      },
+      {
+        "key": "zombie_villager_taiga",
+        "name": "Taiga Zombie Villager Head",
+        "item": "mh:zombie_villager_taiga_head",
+        "match": {
+          "mark_variant": 6
+        }
       }
     ]
   },

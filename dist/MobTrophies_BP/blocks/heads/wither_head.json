@@ -63,7 +63,7 @@
         "explosion_resistance": 1
       },
       "minecraft:light_dampening": 0,
-      "minecraft:map_color": "#2b2b2b",
+      "minecraft:map_color": "#363636",
       "tag:mh_trophy": {}
     },
     "permutations": [

@@ -358,10 +358,61 @@
   "mh:pillager_head": {
     "sound": "stone"
   },
+  "mh:vindicator_head": {
+    "sound": "stone"
+  },
   "mh:ravager_head": {
     "sound": "stone"
   },
   "mh:shulker_head": {
+    "sound": "stone"
+  },
+  "mh:shulker_black_head": {
+    "sound": "stone"
+  },
+  "mh:shulker_red_head": {
+    "sound": "stone"
+  },
+  "mh:shulker_green_head": {
+    "sound": "stone"
+  },
+  "mh:shulker_brown_head": {
+    "sound": "stone"
+  },
+  "mh:shulker_blue_head": {
+    "sound": "stone"
+  },
+  "mh:shulker_purple_head": {
+    "sound": "stone"
+  },
+  "mh:shulker_cyan_head": {
+    "sound": "stone"
+  },
+  "mh:shulker_light_gray_head": {
+    "sound": "stone"
+  },
+  "mh:shulker_gray_head": {
+    "sound": "stone"
+  },
+  "mh:shulker_pink_head": {
+    "sound": "stone"
+  },
+  "mh:shulker_lime_head": {
+    "sound": "stone"
+  },
+  "mh:shulker_yellow_head": {
+    "sound": "stone"
+  },
+  "mh:shulker_light_blue_head": {
+    "sound": "stone"
+  },
+  "mh:shulker_magenta_head": {
+    "sound": "stone"
+  },
+  "mh:shulker_orange_head": {
+    "sound": "stone"
+  },
+  "mh:shulker_white_head": {
     "sound": "stone"
   },
   "mh:silverfish_head": {
@@ -379,9 +430,6 @@
   "mh:vex_head": {
     "sound": "stone"
   },
-  "mh:vindicator_head": {
-    "sound": "stone"
-  },
   "mh:warden_head": {
     "sound": "stone"
   },
@@ -394,7 +442,28 @@
   "mh:zombie_nautilus_head": {
     "sound": "stone"
   },
+  "mh:zombie_nautilus_coral_head": {
+    "sound": "stone"
+  },
   "mh:zombie_villager_head": {
+    "sound": "stone"
+  },
+  "mh:zombie_villager_desert_head": {
+    "sound": "stone"
+  },
+  "mh:zombie_villager_jungle_head": {
+    "sound": "stone"
+  },
+  "mh:zombie_villager_savanna_head": {
+    "sound": "stone"
+  },
+  "mh:zombie_villager_snow_head": {
+    "sound": "stone"
+  },
+  "mh:zombie_villager_swamp_head": {
+    "sound": "stone"
+  },
+  "mh:zombie_villager_taiga_head": {
     "sound": "stone"
   },
   "mh:wither_head": {
