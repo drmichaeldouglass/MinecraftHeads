@@ -7,7 +7,7 @@
         "texture_width": 64,
         "texture_height": 64,
         "visible_bounds_width": 3,
-        "visible_bounds_height": 3.03125,
+        "visible_bounds_height": 3.171875,
         "visible_bounds_offset": [
           0,
           1.5,
@@ -43,74 +43,74 @@
           "cubes": [
             {
               "origin": [
-                -4.5,
+                -5.625,
                 23.5,
-                -4.5
+                -5.625
               ],
               "size": [
-                9.0,
-                9.0,
-                9.0
+                11.25,
+                11.25,
+                11.25
               ],
               "uv": {
                 "north": {
                   "uv": [
-                    8,
-                    8
+                    10,
+                    10
                   ],
                   "uv_size": [
-                    8,
-                    8
+                    10,
+                    10
                   ]
                 },
                 "east": {
                   "uv": [
                     0,
-                    8
+                    10
                   ],
                   "uv_size": [
-                    8,
-                    8
+                    10,
+                    10
                   ]
                 },
                 "south": {
                   "uv": [
-                    24,
-                    8
+                    30,
+                    10
                   ],
                   "uv_size": [
-                    8,
-                    8
+                    10,
+                    10
                   ]
                 },
                 "west": {
                   "uv": [
-                    16,
-                    8
+                    20,
+                    10
                   ],
                   "uv_size": [
-                    8,
-                    8
+                    10,
+                    10
                   ]
                 },
                 "up": {
                   "uv": [
-                    8,
+                    10,
                     0
                   ],
                   "uv_size": [
-                    8,
-                    8
+                    10,
+                    10
                   ]
                 },
                 "down": {
                   "uv": [
-                    16,
-                    8
+                    20,
+                    10
                   ],
                   "uv_size": [
-                    8,
-                    -8
+                    10,
+                    -10
                   ]
                 }
               }
