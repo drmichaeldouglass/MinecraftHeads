@@ -238,29 +238,23 @@ function scanInventory(player) {
   if (!container) return;
 
   const set = getCollection(player);
-  const found = [];
+  const items = [];
   for (let slot = 0; slot < container.size; slot++) {
     const item = container.getItem(slot);
-    if (!item) continue;
-    const entry = headByItem.get(item.typeId);
-    if (entry && !set.has(entry.head.key)) {
-      const newMob = !hasMob(entry.mob, set);
-      set.add(entry.head.key);
-      found.push({ ...entry, newMob });
-    }
+    if (item) items.push(item);
   }
   // Heads worn in the helmet slot count too.
   const worn = player.getComponent("minecraft:equippable")?.getEquipment(EquipmentSlot.Head);
-  const wornEntry = worn && headByItem.get(worn.typeId);
-  if (wornEntry && !set.has(wornEntry.head.key)) {
-    const newMob = !hasMob(wornEntry.mob, set);
-    set.add(wornEntry.head.key);
-    found.push({ ...wornEntry, newMob });
-  }
-  if (found.length === 0) return;
+  if (worn) items.push(worn);
 
-  saveCollection(player, set);
-  for (const { mob, head, newMob } of found) {
+  let found = 0;
+  for (const item of items) {
+    const entry = headByItem.get(item.typeId);
+    if (!entry || set.has(entry.head.key)) continue;
+    const { mob, head } = entry;
+    const newMob = !hasMob(mob, set);
+    set.add(head.key);
+    found++;
     let tag;
     if (mob.experimental) tag = "§d(bonus)";
     else if (newMob) tag = `§7(${requiredCount(set)}/${REQUIRED.length})`;
@@ -268,6 +262,9 @@ function scanInventory(player) {
     const what = newMob ? "New head collected" : "New variant collected";
     player.sendMessage(`§6[Trophies] §f${what}: §e${head.name} ${tag}`);
   }
+  if (found === 0) return;
+
+  saveCollection(player, set);
   player.playSound("random.levelup", { pitch: 1.5, volume: 0.6 });
   celebrate(player, set);
 }
