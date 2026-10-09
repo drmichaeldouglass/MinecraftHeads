@@ -1,0 +1,254 @@
+{
+  "resource_pack_name": "mob_trophies",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "mh_allay_head": {
+      "textures": "textures/blocks/heads/allay_head"
+    },
+    "mh_armadillo_head": {
+      "textures": "textures/blocks/heads/armadillo_head"
+    },
+    "mh_axolotl_head": {
+      "textures": "textures/blocks/heads/axolotl_head"
+    },
+    "mh_bat_head": {
+      "textures": "textures/blocks/heads/bat_head"
+    },
+    "mh_camel_head": {
+      "textures": "textures/blocks/heads/camel_head"
+    },
+    "mh_cat_head": {
+      "textures": "textures/blocks/heads/cat_head"
+    },
+    "mh_chicken_head": {
+      "textures": "textures/blocks/heads/chicken_head"
+    },
+    "mh_cod_head": {
+      "textures": "textures/blocks/heads/cod_head"
+    },
+    "mh_copper_golem_head": {
+      "textures": "textures/blocks/heads/copper_golem_head"
+    },
+    "mh_cow_head": {
+      "textures": "textures/blocks/heads/cow_head"
+    },
+    "mh_donkey_head": {
+      "textures": "textures/blocks/heads/donkey_head"
+    },
+    "mh_frog_head": {
+      "textures": "textures/blocks/heads/frog_head"
+    },
+    "mh_glow_squid_head": {
+      "textures": "textures/blocks/heads/glow_squid_head"
+    },
+    "mh_happy_ghast_head": {
+      "textures": "textures/blocks/heads/happy_ghast_head"
+    },
+    "mh_horse_head": {
+      "textures": "textures/blocks/heads/horse_head"
+    },
+    "mh_mooshroom_head": {
+      "textures": "textures/blocks/heads/mooshroom_head"
+    },
+    "mh_mule_head": {
+      "textures": "textures/blocks/heads/mule_head"
+    },
+    "mh_nautilus_head": {
+      "textures": "textures/blocks/heads/nautilus_head"
+    },
+    "mh_ocelot_head": {
+      "textures": "textures/blocks/heads/ocelot_head"
+    },
+    "mh_parrot_head": {
+      "textures": "textures/blocks/heads/parrot_head"
+    },
+    "mh_pig_head": {
+      "textures": "textures/blocks/heads/pig_head"
+    },
+    "mh_rabbit_head": {
+      "textures": "textures/blocks/heads/rabbit_head"
+    },
+    "mh_salmon_head": {
+      "textures": "textures/blocks/heads/salmon_head"
+    },
+    "mh_sheep_head": {
+      "textures": "textures/blocks/heads/sheep_head"
+    },
+    "mh_skeleton_horse_head": {
+      "textures": "textures/blocks/heads/skeleton_horse_head"
+    },
+    "mh_sniffer_head": {
+      "textures": "textures/blocks/heads/sniffer_head"
+    },
+    "mh_snow_golem_head": {
+      "textures": "textures/blocks/heads/snow_golem_head"
+    },
+    "mh_squid_head": {
+      "textures": "textures/blocks/heads/squid_head"
+    },
+    "mh_strider_head": {
+      "textures": "textures/blocks/heads/strider_head"
+    },
+    "mh_tadpole_head": {
+      "textures": "textures/blocks/heads/tadpole_head"
+    },
+    "mh_tropicalfish_head": {
+      "textures": "textures/blocks/heads/tropicalfish_head"
+    },
+    "mh_turtle_head": {
+      "textures": "textures/blocks/heads/turtle_head"
+    },
+    "mh_villager_head": {
+      "textures": "textures/blocks/heads/villager_head"
+    },
+    "mh_wandering_trader_head": {
+      "textures": "textures/blocks/heads/wandering_trader_head"
+    },
+    "mh_zombie_horse_head": {
+      "textures": "textures/blocks/heads/zombie_horse_head"
+    },
+    "mh_sulfur_cube_head": {
+      "textures": "textures/blocks/heads/sulfur_cube_head"
+    },
+    "mh_bee_head": {
+      "textures": "textures/blocks/heads/bee_head"
+    },
+    "mh_dolphin_head": {
+      "textures": "textures/blocks/heads/dolphin_head"
+    },
+    "mh_enderman_head": {
+      "textures": "textures/blocks/heads/enderman_head"
+    },
+    "mh_fox_head": {
+      "textures": "textures/blocks/heads/fox_head"
+    },
+    "mh_goat_head": {
+      "textures": "textures/blocks/heads/goat_head"
+    },
+    "mh_iron_golem_head": {
+      "textures": "textures/blocks/heads/iron_golem_head"
+    },
+    "mh_llama_head": {
+      "textures": "textures/blocks/heads/llama_head"
+    },
+    "mh_trader_llama_head": {
+      "textures": "textures/blocks/heads/trader_llama_head"
+    },
+    "mh_panda_head": {
+      "textures": "textures/blocks/heads/panda_head"
+    },
+    "mh_polar_bear_head": {
+      "textures": "textures/blocks/heads/polar_bear_head"
+    },
+    "mh_pufferfish_head": {
+      "textures": "textures/blocks/heads/pufferfish_head"
+    },
+    "mh_wolf_head": {
+      "textures": "textures/blocks/heads/wolf_head"
+    },
+    "mh_zombie_pigman_head": {
+      "textures": "textures/blocks/heads/zombie_pigman_head"
+    },
+    "mh_blaze_head": {
+      "textures": "textures/blocks/heads/blaze_head"
+    },
+    "mh_bogged_head": {
+      "textures": "textures/blocks/heads/bogged_head"
+    },
+    "mh_breeze_head": {
+      "textures": "textures/blocks/heads/breeze_head"
+    },
+    "mh_camel_husk_head": {
+      "textures": "textures/blocks/heads/camel_husk_head"
+    },
+    "mh_cave_spider_head": {
+      "textures": "textures/blocks/heads/cave_spider_head"
+    },
+    "mh_creaking_head": {
+      "textures": "textures/blocks/heads/creaking_head"
+    },
+    "mh_drowned_head": {
+      "textures": "textures/blocks/heads/drowned_head"
+    },
+    "mh_elder_guardian_head": {
+      "textures": "textures/blocks/heads/elder_guardian_head"
+    },
+    "mh_endermite_head": {
+      "textures": "textures/blocks/heads/endermite_head"
+    },
+    "mh_evoker_head": {
+      "textures": "textures/blocks/heads/evoker_head"
+    },
+    "mh_ghast_head": {
+      "textures": "textures/blocks/heads/ghast_head"
+    },
+    "mh_guardian_head": {
+      "textures": "textures/blocks/heads/guardian_head"
+    },
+    "mh_hoglin_head": {
+      "textures": "textures/blocks/heads/hoglin_head"
+    },
+    "mh_husk_head": {
+      "textures": "textures/blocks/heads/husk_head"
+    },
+    "mh_magma_cube_head": {
+      "textures": "textures/blocks/heads/magma_cube_head"
+    },
+    "mh_parched_head": {
+      "textures": "textures/blocks/heads/parched_head"
+    },
+    "mh_phantom_head": {
+      "textures": "textures/blocks/heads/phantom_head"
+    },
+    "mh_piglin_brute_head": {
+      "textures": "textures/blocks/heads/piglin_brute_head"
+    },
+    "mh_pillager_head": {
+      "textures": "textures/blocks/heads/pillager_head"
+    },
+    "mh_ravager_head": {
+      "textures": "textures/blocks/heads/ravager_head"
+    },
+    "mh_shulker_head": {
+      "textures": "textures/blocks/heads/shulker_head"
+    },
+    "mh_silverfish_head": {
+      "textures": "textures/blocks/heads/silverfish_head"
+    },
+    "mh_slime_head": {
+      "textures": "textures/blocks/heads/slime_head"
+    },
+    "mh_spider_head": {
+      "textures": "textures/blocks/heads/spider_head"
+    },
+    "mh_stray_head": {
+      "textures": "textures/blocks/heads/stray_head"
+    },
+    "mh_vex_head": {
+      "textures": "textures/blocks/heads/vex_head"
+    },
+    "mh_vindicator_head": {
+      "textures": "textures/blocks/heads/vindicator_head"
+    },
+    "mh_warden_head": {
+      "textures": "textures/blocks/heads/warden_head"
+    },
+    "mh_witch_head": {
+      "textures": "textures/blocks/heads/witch_head"
+    },
+    "mh_zoglin_head": {
+      "textures": "textures/blocks/heads/zoglin_head"
+    },
+    "mh_zombie_nautilus_head": {
+      "textures": "textures/blocks/heads/zombie_nautilus_head"
+    },
+    "mh_zombie_villager_head": {
+      "textures": "textures/blocks/heads/zombie_villager_head"
+    },
+    "mh_wither_head": {
+      "textures": "textures/blocks/heads/wither_head"
+    }
+  }
+}
