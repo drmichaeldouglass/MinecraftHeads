@@ -1,6 +1,6 @@
-import { world, system, ItemStack, Player } from "@minecraft/server";
+import { world, system, EquipmentSlot, ItemStack, Player } from "@minecraft/server";
 import { ActionFormData } from "@minecraft/server-ui";
-import { HEADS } from "./heads.js";
+import { MOBS } from "./heads.js";
 
 // ---------------------------------------------------------------------------
 // Settings
@@ -32,14 +32,17 @@ const PROP_COMPLETE = "mh:complete";
 // Lookups
 // ---------------------------------------------------------------------------
 
-const headByEntity = new Map();
+// Each mob has one or more heads: one per variant (cat breed, sheep colour,
+// villager biome, ...). A mob counts as collected once any of them is.
+const mobByEntity = new Map();
 const headByItem = new Map();
-for (const head of HEADS) {
-  for (const entityId of head.entities) headByEntity.set(entityId, head);
-  headByItem.set(head.item, head);
+for (const mob of MOBS) {
+  for (const entityId of mob.entities) mobByEntity.set(entityId, mob);
+  for (const head of mob.heads) headByItem.set(head.item, { mob, head });
 }
-const REQUIRED = HEADS.filter((h) => !h.experimental);
-const BONUS = HEADS.filter((h) => h.experimental);
+const REQUIRED = MOBS.filter((m) => !m.experimental);
+const BONUS = MOBS.filter((m) => m.experimental);
+const ALL_HEADS = MOBS.flatMap((m) => m.heads);
 const CATEGORIES = ["Passive", "Neutral", "Hostile", "Boss"];
 
 // ---------------------------------------------------------------------------
@@ -59,6 +62,50 @@ function killingPlayer(source) {
  */
 function playerNearby(dimension, location, radius) {
   return dimension.getPlayers({ location, maxDistance: radius }).length > 0;
+}
+
+/**
+ * Read one of the things a head variant can be matched on.
+ * @param {import("@minecraft/server").Entity} entity
+ * @param {string} trait
+ */
+function readTrait(entity, trait) {
+  try {
+    switch (trait) {
+      case "variant":
+        return entity.getComponent("minecraft:variant")?.value;
+      case "mark_variant":
+        return entity.getComponent("minecraft:mark_variant")?.value;
+      case "color":
+        return entity.getComponent("minecraft:color")?.value;
+      case "skin_id":
+        return entity.getComponent("minecraft:skin_id")?.value;
+      default:
+        return entity.getProperty(trait); // e.g. minecraft:climate_variant
+    }
+  } catch {
+    return undefined;
+  }
+}
+
+/**
+ * Pick the head that matches the mob's variant. Falls back to the first
+ * (default) head if the variant is unknown, e.g. one added by a game update.
+ * @param {{ heads: { match: Record<string, unknown> }[] }} mob
+ * @param {import("@minecraft/server").Entity} entity
+ */
+function headFor(mob, entity) {
+  if (mob.heads.length === 1) return mob.heads[0];
+  const seen = new Map();
+  const read = (trait) => {
+    if (!seen.has(trait)) seen.set(trait, readTrait(entity, trait));
+    return seen.get(trait);
+  };
+  for (const head of mob.heads) {
+    const wanted = Object.entries(head.match);
+    if (wanted.length > 0 && wanted.every(([trait, value]) => read(trait) === value)) return head;
+  }
+  return mob.heads[0];
 }
 
 /**
@@ -89,15 +136,15 @@ world.afterEvents.entityDie.subscribe((event) => {
     return; // Entity already unloaded.
   }
 
-  const head = headByEntity.get(typeId);
-  if (!head) return;
+  const mob = mobByEntity.get(typeId);
+  if (!mob) return;
 
   const byPlayer = killingPlayer(event.damageSource) !== undefined;
   const bossCredit = BOSS_TYPES.has(typeId) && playerNearby(dimension, location, BOSS_PLAYER_RADIUS);
   if (!byPlayer && !bossCredit) return;
   if (Math.random() >= DROP_CHANCE) return;
 
-  dropHead(head, dimension, location);
+  dropHead(headFor(mob, dead), dimension, location);
 });
 
 // Breaking an active creaking heart is how a player defeats a creaking.
@@ -114,10 +161,10 @@ world.beforeEvents.playerBreakBlock.subscribe((event) => {
   });
   if (creakings.length === 0) return;
 
-  const head = headByEntity.get("minecraft:creaking");
-  if (!head || Math.random() >= DROP_CHANCE) return;
+  const mob = mobByEntity.get("minecraft:creaking");
+  if (!mob || Math.random() >= DROP_CHANCE) return;
   // World changes are not allowed inside before-events, so drop it next tick.
-  system.run(() => dropHead(head, dimension, location));
+  system.run(() => dropHead(mob.heads[0], dimension, location));
 });
 
 // ---------------------------------------------------------------------------
@@ -149,9 +196,24 @@ function saveCollection(player, set) {
   player.setDynamicProperty(PROP_COLLECTED, JSON.stringify([...set]));
 }
 
+/** @param {{ heads: { key: string }[] }} mob @param {Set<string>} set */
+function hasMob(mob, set) {
+  return mob.heads.some((h) => set.has(h.key));
+}
+
+/** @param {{ heads: { key: string }[] }} mob @param {Set<string>} set */
+function headCount(mob, set) {
+  return mob.heads.filter((h) => set.has(h.key)).length;
+}
+
 /** @param {Set<string>} set */
 function requiredCount(set) {
-  return REQUIRED.filter((h) => set.has(h.key)).length;
+  return REQUIRED.filter((m) => hasMob(m, set)).length;
+}
+
+/** @param {Set<string>} set */
+function totalHeads(set) {
+  return ALL_HEADS.filter((h) => set.has(h.key)).length;
 }
 
 /** @param {Player} player @param {Set<string>} set */
@@ -180,18 +242,31 @@ function scanInventory(player) {
   for (let slot = 0; slot < container.size; slot++) {
     const item = container.getItem(slot);
     if (!item) continue;
-    const head = headByItem.get(item.typeId);
-    if (head && !set.has(head.key)) {
-      set.add(head.key);
-      found.push(head);
+    const entry = headByItem.get(item.typeId);
+    if (entry && !set.has(entry.head.key)) {
+      const newMob = !hasMob(entry.mob, set);
+      set.add(entry.head.key);
+      found.push({ ...entry, newMob });
     }
+  }
+  // Heads worn in the helmet slot count too.
+  const worn = player.getComponent("minecraft:equippable")?.getEquipment(EquipmentSlot.Head);
+  const wornEntry = worn && headByItem.get(worn.typeId);
+  if (wornEntry && !set.has(wornEntry.head.key)) {
+    const newMob = !hasMob(wornEntry.mob, set);
+    set.add(wornEntry.head.key);
+    found.push({ ...wornEntry, newMob });
   }
   if (found.length === 0) return;
 
   saveCollection(player, set);
-  for (const head of found) {
-    const tag = head.experimental ? "§d(bonus)" : `§7(${requiredCount(set)}/${REQUIRED.length})`;
-    player.sendMessage(`§6[Trophies] §fNew head collected: §e${head.name} ${tag}`);
+  for (const { mob, head, newMob } of found) {
+    let tag;
+    if (mob.experimental) tag = "§d(bonus)";
+    else if (newMob) tag = `§7(${requiredCount(set)}/${REQUIRED.length})`;
+    else tag = `§7(${mob.name} variant ${headCount(mob, set)}/${mob.heads.length})`;
+    const what = newMob ? "New head collected" : "New variant collected";
+    player.sendMessage(`§6[Trophies] §f${what}: §e${head.name} ${tag}`);
   }
   player.playSound("random.levelup", { pitch: 1.5, volume: 0.6 });
   celebrate(player, set);
@@ -222,11 +297,52 @@ function progressBar(done, total) {
   return `§a${"|".repeat(filled)}§8${"|".repeat(width - filled)}§r`;
 }
 
-/** @param {{ key: string, name: string }[]} heads @param {Set<string>} set */
-function listHeads(heads, set) {
-  return heads
-    .map((h) => (set.has(h.key) ? `§a[X] §f${h.name}` : `§8[ ] §7${h.name}`))
+/** @param {boolean} have @param {string} text */
+function tick(have, text) {
+  return have ? `§a[X] §f${text}` : `§8[ ] §7${text}`;
+}
+
+/** @param {typeof MOBS} mobs @param {Set<string>} set */
+function listMobs(mobs, set) {
+  return mobs
+    .map((m) => {
+      const line = tick(hasMob(m, set), m.name);
+      return m.heads.length > 1 ? `${line} §8(${headCount(m, set)}/${m.heads.length})` : line;
+    })
     .join("\n");
+}
+
+/** @param {Player} player @param {(typeof MOBS)[number]} mob @param {() => void} back */
+function showVariants(player, mob, back) {
+  const set = getCollection(player);
+  new ActionFormData()
+    .title(`${mob.name} heads`)
+    .body(
+      `Collected §e${headCount(mob, set)}§r of §e${mob.heads.length}§r ${mob.name} heads\n\n` +
+        mob.heads.map((h) => tick(set.has(h.key), h.name)).join("\n")
+    )
+    .button("Back")
+    .show(player)
+    .then((r) => {
+      if (!r.canceled && r.selection === 0) back();
+    });
+}
+
+/** @param {Player} player @param {string} title @param {typeof MOBS} mobs */
+function showPage(player, title, mobs) {
+  const set = getCollection(player);
+  const withVariants = mobs.filter((m) => m.heads.length > 1);
+  const form = new ActionFormData().title(title).body(listMobs(mobs, set));
+  for (const mob of withVariants) {
+    form.button(`${mob.name} variants\n§8${headCount(mob, set)}/${mob.heads.length}`);
+  }
+  form.button("Back");
+  form.show(player).then((r) => {
+    if (r.canceled || r.selection === undefined) return;
+    const mob = withVariants[r.selection];
+    if (mob) showVariants(player, mob, () => showPage(player, title, mobs));
+    else showLedger(player);
+  });
 }
 
 /** @param {Player} player */
@@ -237,38 +353,33 @@ function showLedger(player) {
     .title("Trophy Ledger")
     .body(
       `Collected §e${done}§r of §e${REQUIRED.length}§r mob heads\n` +
-        `${progressBar(done, REQUIRED.length)}\n\n` +
+        `${progressBar(done, REQUIRED.length)}\n` +
+        `Variants: §e${totalHeads(set)}§r of §e${ALL_HEADS.length}§r heads\n\n` +
         "Kill a mob to make it drop its head, then pick it up.\n" +
-        "Place heads on the floor or on a wall to show them off!"
+        "Many mobs have a different head for each variant: every cat breed, " +
+        "sheep colour and villager biome.\n" +
+        "Place heads on the floor or on a wall, or wear them as a helmet!"
     );
 
   const pages = [];
   for (const category of CATEGORIES) {
-    const heads = REQUIRED.filter((h) => h.category === category);
-    if (heads.length === 0) continue;
-    const have = heads.filter((h) => set.has(h.key)).length;
-    form.button(`${category} mobs\n§8${have}/${heads.length}`);
-    pages.push({ title: `${category} mobs`, heads });
+    const mobs = REQUIRED.filter((m) => m.category === category);
+    if (mobs.length === 0) continue;
+    const have = mobs.filter((m) => hasMob(m, set)).length;
+    form.button(`${category} mobs\n§8${have}/${mobs.length}`);
+    pages.push({ title: `${category} mobs`, mobs });
   }
   if (BONUS.length > 0) {
-    const have = BONUS.filter((h) => set.has(h.key)).length;
+    const have = BONUS.filter((m) => hasMob(m, set)).length;
     form.button(`Bonus (experimental)\n§8${have}/${BONUS.length}`);
-    pages.push({ title: "Bonus heads", heads: BONUS });
+    pages.push({ title: "Bonus heads", mobs: BONUS });
   }
   form.button("Close");
 
   form.show(player).then((response) => {
     if (response.canceled || response.selection === undefined) return;
     const page = pages[response.selection];
-    if (!page) return;
-    new ActionFormData()
-      .title(page.title)
-      .body(listHeads(page.heads, set))
-      .button("Back")
-      .show(player)
-      .then((r) => {
-        if (!r.canceled && r.selection === 0) showLedger(player);
-      });
+    if (page) showPage(player, page.title, page.mobs);
   });
 }
 

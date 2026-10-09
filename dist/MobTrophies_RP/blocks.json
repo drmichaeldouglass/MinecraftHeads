@@ -25,6 +25,12 @@
   "mh:chicken_head": {
     "sound": "stone"
   },
+  "mh:chicken_warm_head": {
+    "sound": "stone"
+  },
+  "mh:chicken_cold_head": {
+    "sound": "stone"
+  },
   "mh:cod_head": {
     "sound": "stone"
   },

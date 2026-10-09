@@ -25,6 +25,12 @@
     "mh_chicken_head": {
       "textures": "textures/blocks/heads/chicken_head"
     },
+    "mh_chicken_warm_head": {
+      "textures": "textures/blocks/heads/chicken_warm_head"
+    },
+    "mh_chicken_cold_head": {
+      "textures": "textures/blocks/heads/chicken_cold_head"
+    },
     "mh_cod_head": {
       "textures": "textures/blocks/heads/cod_head"
     },
