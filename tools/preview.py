@@ -18,7 +18,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from mobs import HEADS  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-RP = ROOT / "packs" / "MobTrophies_RP"
+RP = ROOT / "dist" / "MobTrophies_RP"
 OUT = ROOT / "docs" / "heads_preview.png"
 
 SCALE = 9

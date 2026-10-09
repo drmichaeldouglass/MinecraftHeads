@@ -50,7 +50,7 @@ needed.
 
 ## Settings
 
-Near the top of `packs/MobTrophies_BP/scripts/main.js`:
+Near the top of `src/scripts/main.js`:
 
 - `DROP_CHANCE`: chance a head drops (default `1.0`, so always).
 - `BOSS_PLAYER_RADIUS`, `CREAKING_RADIUS`: how close a player must be.
@@ -73,8 +73,9 @@ python3 tools/build.py
 python3 tools/preview.py
 ```
 
-Only `packs/MobTrophies_BP/scripts/main.js` is hand written. Everything else in
-`packs/` is overwritten by the build.
+The build output all goes into `dist/`, which is wiped and recreated on every
+build. The game script is hand written in `src/scripts/main.js` and copied into
+the behavior pack, so edit it there, never in `dist/`.
 
 If a future update adds a new mob, add an entry to `tools/mobs.py` and rebuild.
 The ledger and collection total update automatically.
@@ -82,8 +83,10 @@ The ledger and collection total update automatically.
 ## Project layout
 
 ```
-packs/MobTrophies_BP/   behavior pack (blocks, ledger item, recipe, scripts)
-packs/MobTrophies_RP/   resource pack (geometry, textures, names)
-dist/MobTrophies.mcaddon  ready to install
-tools/                  generator and preview renderer
+src/scripts/main.js        game logic (hand written)
+tools/                     generator and preview renderer
+dist/                      build output (generated, do not edit)
+  MobTrophies_BP/          behavior pack (blocks, ledger item, recipe, scripts)
+  MobTrophies_RP/          resource pack (geometry, textures, names)
+  MobTrophies.mcaddon      both packs zipped, ready to install
 ```

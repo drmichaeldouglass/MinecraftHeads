@@ -4,12 +4,12 @@
 Usage:  python3 tools/build.py
 
 Reads the head definitions in tools/mobs.py and writes:
-  packs/MobTrophies_BP/   blocks, items, recipes, scripts/heads.js, manifest
-  packs/MobTrophies_RP/   geometry, textures, lang, manifest
-  dist/MobTrophies.mcaddon
+  dist/MobTrophies_BP/      blocks, items, recipes, scripts, manifest
+  dist/MobTrophies_RP/      geometry, textures, lang, manifest
+  dist/MobTrophies.mcaddon  both packs zipped, ready to install
 
-Hand written files (scripts/main.js) are left alone. Everything else under
-packs/ is regenerated, so edit mobs.py rather than the generated JSON.
+dist/ is wiped and rebuilt every time. Hand written scripts live in
+src/scripts/ and are copied in; edit mobs.py rather than the generated JSON.
 """
 
 import json
@@ -25,9 +25,10 @@ sys.path.insert(0, str(Path(__file__).parent))
 from mobs import HEADS, Cube  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-BP = ROOT / "packs" / "MobTrophies_BP"
-RP = ROOT / "packs" / "MobTrophies_RP"
 DIST = ROOT / "dist"
+BP = DIST / "MobTrophies_BP"
+RP = DIST / "MobTrophies_RP"
+SCRIPTS_SRC = ROOT / "src" / "scripts"
 
 NS = "mh"
 VERSION = [1, 0, 0]
@@ -416,12 +417,9 @@ def manifests():
 
 
 def clean():
-    for path in [BP / "blocks", BP / "items", BP / "recipes", BP / "texts",
-                 RP / "models", RP / "textures", RP / "texts", BP / "scripts" / "heads.js"]:
-        if path.is_dir():
-            shutil.rmtree(path)
-        elif path.exists():
-            path.unlink()
+    if DIST.exists():
+        shutil.rmtree(DIST)
+    DIST.mkdir()
 
 
 def heads_js():
@@ -446,7 +444,6 @@ def lang(pack_desc):
 
 
 def make_mcaddon():
-    DIST.mkdir(exist_ok=True)
     out = DIST / "MobTrophies.mcaddon"
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
         for pack_dir in (BP, RP):
@@ -548,7 +545,7 @@ def main():
             "result": {"item": "mh:trophy_ledger"},
         },
     })
-    (BP / "scripts").mkdir(parents=True, exist_ok=True)
+    shutil.copytree(SCRIPTS_SRC, BP / "scripts")
     (BP / "scripts" / "heads.js").write_text(heads_js())
 
     manifests()
