@@ -452,7 +452,11 @@ def make_mcaddon():
         for pack_dir in (BP, RP):
             for f in sorted(pack_dir.rglob("*")):
                 if f.is_file():
-                    z.write(f, Path(pack_dir.name) / f.relative_to(pack_dir))
+                    # Fixed timestamp so rebuilding unchanged packs gives an identical file.
+                    info = zipfile.ZipInfo(str(Path(pack_dir.name) / f.relative_to(pack_dir)),
+                                           date_time=(2024, 1, 1, 0, 0, 0))
+                    info.compress_type = zipfile.ZIP_DEFLATED
+                    z.writestr(info, f.read_bytes())
     return out
 
 
