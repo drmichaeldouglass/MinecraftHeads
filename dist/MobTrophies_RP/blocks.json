@@ -1,0 +1,253 @@
+{
+  "format_version": [
+    1,
+    1,
+    0
+  ],
+  "mh:allay_head": {
+    "sound": "stone"
+  },
+  "mh:armadillo_head": {
+    "sound": "stone"
+  },
+  "mh:axolotl_head": {
+    "sound": "stone"
+  },
+  "mh:bat_head": {
+    "sound": "stone"
+  },
+  "mh:camel_head": {
+    "sound": "stone"
+  },
+  "mh:cat_head": {
+    "sound": "stone"
+  },
+  "mh:chicken_head": {
+    "sound": "stone"
+  },
+  "mh:cod_head": {
+    "sound": "stone"
+  },
+  "mh:copper_golem_head": {
+    "sound": "stone"
+  },
+  "mh:cow_head": {
+    "sound": "stone"
+  },
+  "mh:donkey_head": {
+    "sound": "stone"
+  },
+  "mh:frog_head": {
+    "sound": "stone"
+  },
+  "mh:glow_squid_head": {
+    "sound": "stone"
+  },
+  "mh:happy_ghast_head": {
+    "sound": "stone"
+  },
+  "mh:horse_head": {
+    "sound": "stone"
+  },
+  "mh:mooshroom_head": {
+    "sound": "stone"
+  },
+  "mh:mule_head": {
+    "sound": "stone"
+  },
+  "mh:nautilus_head": {
+    "sound": "stone"
+  },
+  "mh:ocelot_head": {
+    "sound": "stone"
+  },
+  "mh:parrot_head": {
+    "sound": "stone"
+  },
+  "mh:pig_head": {
+    "sound": "stone"
+  },
+  "mh:rabbit_head": {
+    "sound": "stone"
+  },
+  "mh:salmon_head": {
+    "sound": "stone"
+  },
+  "mh:sheep_head": {
+    "sound": "stone"
+  },
+  "mh:skeleton_horse_head": {
+    "sound": "stone"
+  },
+  "mh:sniffer_head": {
+    "sound": "stone"
+  },
+  "mh:snow_golem_head": {
+    "sound": "stone"
+  },
+  "mh:squid_head": {
+    "sound": "stone"
+  },
+  "mh:strider_head": {
+    "sound": "stone"
+  },
+  "mh:tadpole_head": {
+    "sound": "stone"
+  },
+  "mh:tropicalfish_head": {
+    "sound": "stone"
+  },
+  "mh:turtle_head": {
+    "sound": "stone"
+  },
+  "mh:villager_head": {
+    "sound": "stone"
+  },
+  "mh:wandering_trader_head": {
+    "sound": "stone"
+  },
+  "mh:zombie_horse_head": {
+    "sound": "stone"
+  },
+  "mh:sulfur_cube_head": {
+    "sound": "stone"
+  },
+  "mh:bee_head": {
+    "sound": "stone"
+  },
+  "mh:dolphin_head": {
+    "sound": "stone"
+  },
+  "mh:enderman_head": {
+    "sound": "stone"
+  },
+  "mh:fox_head": {
+    "sound": "stone"
+  },
+  "mh:goat_head": {
+    "sound": "stone"
+  },
+  "mh:iron_golem_head": {
+    "sound": "stone"
+  },
+  "mh:llama_head": {
+    "sound": "stone"
+  },
+  "mh:trader_llama_head": {
+    "sound": "stone"
+  },
+  "mh:panda_head": {
+    "sound": "stone"
+  },
+  "mh:polar_bear_head": {
+    "sound": "stone"
+  },
+  "mh:pufferfish_head": {
+    "sound": "stone"
+  },
+  "mh:wolf_head": {
+    "sound": "stone"
+  },
+  "mh:zombie_pigman_head": {
+    "sound": "stone"
+  },
+  "mh:blaze_head": {
+    "sound": "stone"
+  },
+  "mh:bogged_head": {
+    "sound": "stone"
+  },
+  "mh:breeze_head": {
+    "sound": "stone"
+  },
+  "mh:camel_husk_head": {
+    "sound": "stone"
+  },
+  "mh:cave_spider_head": {
+    "sound": "stone"
+  },
+  "mh:creaking_head": {
+    "sound": "stone"
+  },
+  "mh:drowned_head": {
+    "sound": "stone"
+  },
+  "mh:elder_guardian_head": {
+    "sound": "stone"
+  },
+  "mh:endermite_head": {
+    "sound": "stone"
+  },
+  "mh:evoker_head": {
+    "sound": "stone"
+  },
+  "mh:ghast_head": {
+    "sound": "stone"
+  },
+  "mh:guardian_head": {
+    "sound": "stone"
+  },
+  "mh:hoglin_head": {
+    "sound": "stone"
+  },
+  "mh:husk_head": {
+    "sound": "stone"
+  },
+  "mh:magma_cube_head": {
+    "sound": "stone"
+  },
+  "mh:parched_head": {
+    "sound": "stone"
+  },
+  "mh:phantom_head": {
+    "sound": "stone"
+  },
+  "mh:piglin_brute_head": {
+    "sound": "stone"
+  },
+  "mh:pillager_head": {
+    "sound": "stone"
+  },
+  "mh:ravager_head": {
+    "sound": "stone"
+  },
+  "mh:shulker_head": {
+    "sound": "stone"
+  },
+  "mh:silverfish_head": {
+    "sound": "stone"
+  },
+  "mh:slime_head": {
+    "sound": "stone"
+  },
+  "mh:spider_head": {
+    "sound": "stone"
+  },
+  "mh:stray_head": {
+    "sound": "stone"
+  },
+  "mh:vex_head": {
+    "sound": "stone"
+  },
+  "mh:vindicator_head": {
+    "sound": "stone"
+  },
+  "mh:warden_head": {
+    "sound": "stone"
+  },
+  "mh:witch_head": {
+    "sound": "stone"
+  },
+  "mh:zoglin_head": {
+    "sound": "stone"
+  },
+  "mh:zombie_nautilus_head": {
+    "sound": "stone"
+  },
+  "mh:zombie_villager_head": {
+    "sound": "stone"
+  },
+  "mh:wither_head": {
+    "sound": "stone"
+  }
+}
