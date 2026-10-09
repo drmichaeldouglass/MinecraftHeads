@@ -147,9 +147,43 @@ export const MOBS = [
     "heads": [
       {
         "key": "axolotl",
-        "name": "Axolotl Head",
+        "name": "Lucy Axolotl Head",
         "item": "mh:axolotl_head",
-        "match": {}
+        "match": {
+          "variant": 0
+        }
+      },
+      {
+        "key": "axolotl_wild",
+        "name": "Wild Axolotl Head",
+        "item": "mh:axolotl_wild_head",
+        "match": {
+          "variant": 3
+        }
+      },
+      {
+        "key": "axolotl_gold",
+        "name": "Gold Axolotl Head",
+        "item": "mh:axolotl_gold_head",
+        "match": {
+          "variant": 2
+        }
+      },
+      {
+        "key": "axolotl_cyan",
+        "name": "Cyan Axolotl Head",
+        "item": "mh:axolotl_cyan_head",
+        "match": {
+          "variant": 1
+        }
+      },
+      {
+        "key": "axolotl_blue",
+        "name": "Blue Axolotl Head",
+        "item": "mh:axolotl_blue_head",
+        "match": {
+          "variant": 4
+        }
       }
     ]
   },
@@ -198,9 +232,91 @@ export const MOBS = [
     "heads": [
       {
         "key": "cat",
-        "name": "Cat Head",
+        "name": "Tabby Cat Head",
         "item": "mh:cat_head",
-        "match": {}
+        "match": {
+          "variant": 8
+        }
+      },
+      {
+        "key": "cat_tuxedo",
+        "name": "Tuxedo Cat Head",
+        "item": "mh:cat_tuxedo_head",
+        "match": {
+          "variant": 1
+        }
+      },
+      {
+        "key": "cat_red",
+        "name": "Red Cat Head",
+        "item": "mh:cat_red_head",
+        "match": {
+          "variant": 2
+        }
+      },
+      {
+        "key": "cat_siamese",
+        "name": "Siamese Cat Head",
+        "item": "mh:cat_siamese_head",
+        "match": {
+          "variant": 3
+        }
+      },
+      {
+        "key": "cat_british_shorthair",
+        "name": "British Shorthair Cat Head",
+        "item": "mh:cat_british_shorthair_head",
+        "match": {
+          "variant": 4
+        }
+      },
+      {
+        "key": "cat_calico",
+        "name": "Calico Cat Head",
+        "item": "mh:cat_calico_head",
+        "match": {
+          "variant": 5
+        }
+      },
+      {
+        "key": "cat_persian",
+        "name": "Persian Cat Head",
+        "item": "mh:cat_persian_head",
+        "match": {
+          "variant": 6
+        }
+      },
+      {
+        "key": "cat_ragdoll",
+        "name": "Ragdoll Cat Head",
+        "item": "mh:cat_ragdoll_head",
+        "match": {
+          "variant": 7
+        }
+      },
+      {
+        "key": "cat_white",
+        "name": "White Cat Head",
+        "item": "mh:cat_white_head",
+        "match": {
+          "variant": 0
+        }
+      },
+      {
+        "key": "cat_jellie",
+        "name": "Jellie Cat Head",
+        "item": "mh:cat_jellie_head",
+        "match": {
+          "variant": 10
+        }
+      },
+      {
+        "key": "cat_black",
+        "name": "Black Cat Head",
+        "item": "mh:cat_black_head",
+        "match": {
+          "variant": 9
+        }
       }
     ]
   },
@@ -269,7 +385,33 @@ export const MOBS = [
         "key": "copper_golem",
         "name": "Copper Golem Head",
         "item": "mh:copper_golem_head",
-        "match": {}
+        "match": {
+          "minecraft:oxidation_level": "unoxidized"
+        }
+      },
+      {
+        "key": "copper_golem_exposed",
+        "name": "Exposed Copper Golem Head",
+        "item": "mh:copper_golem_exposed_head",
+        "match": {
+          "minecraft:oxidation_level": "exposed"
+        }
+      },
+      {
+        "key": "copper_golem_weathered",
+        "name": "Weathered Copper Golem Head",
+        "item": "mh:copper_golem_weathered_head",
+        "match": {
+          "minecraft:oxidation_level": "weathered"
+        }
+      },
+      {
+        "key": "copper_golem_oxidized",
+        "name": "Oxidized Copper Golem Head",
+        "item": "mh:copper_golem_oxidized_head",
+        "match": {
+          "minecraft:oxidation_level": "oxidized"
+        }
       }
     ]
   },
@@ -286,7 +428,25 @@ export const MOBS = [
         "key": "cow",
         "name": "Cow Head",
         "item": "mh:cow_head",
-        "match": {}
+        "match": {
+          "minecraft:climate_variant": "temperate"
+        }
+      },
+      {
+        "key": "cow_warm",
+        "name": "Warm Cow Head",
+        "item": "mh:cow_warm_head",
+        "match": {
+          "minecraft:climate_variant": "warm"
+        }
+      },
+      {
+        "key": "cow_cold",
+        "name": "Cold Cow Head",
+        "item": "mh:cow_cold_head",
+        "match": {
+          "minecraft:climate_variant": "cold"
+        }
       }
     ]
   },
@@ -318,9 +478,27 @@ export const MOBS = [
     "heads": [
       {
         "key": "frog",
-        "name": "Frog Head",
+        "name": "Temperate Frog Head",
         "item": "mh:frog_head",
-        "match": {}
+        "match": {
+          "variant": 0
+        }
+      },
+      {
+        "key": "frog_cold",
+        "name": "Cold Frog Head",
+        "item": "mh:frog_cold_head",
+        "match": {
+          "variant": 1
+        }
+      },
+      {
+        "key": "frog_warm",
+        "name": "Warm Frog Head",
+        "item": "mh:frog_warm_head",
+        "match": {
+          "variant": 2
+        }
       }
     ]
   },
@@ -369,9 +547,59 @@ export const MOBS = [
     "heads": [
       {
         "key": "horse",
-        "name": "Horse Head",
+        "name": "Brown Horse Head",
         "item": "mh:horse_head",
-        "match": {}
+        "match": {
+          "variant": 3
+        }
+      },
+      {
+        "key": "horse_white",
+        "name": "White Horse Head",
+        "item": "mh:horse_white_head",
+        "match": {
+          "variant": 0
+        }
+      },
+      {
+        "key": "horse_creamy",
+        "name": "Creamy Horse Head",
+        "item": "mh:horse_creamy_head",
+        "match": {
+          "variant": 1
+        }
+      },
+      {
+        "key": "horse_chestnut",
+        "name": "Chestnut Horse Head",
+        "item": "mh:horse_chestnut_head",
+        "match": {
+          "variant": 2
+        }
+      },
+      {
+        "key": "horse_black",
+        "name": "Black Horse Head",
+        "item": "mh:horse_black_head",
+        "match": {
+          "variant": 4
+        }
+      },
+      {
+        "key": "horse_gray",
+        "name": "Gray Horse Head",
+        "item": "mh:horse_gray_head",
+        "match": {
+          "variant": 5
+        }
+      },
+      {
+        "key": "horse_dark_brown",
+        "name": "Dark Brown Horse Head",
+        "item": "mh:horse_dark_brown_head",
+        "match": {
+          "variant": 6
+        }
       }
     ]
   },

@@ -13,6 +13,18 @@
     "mh_axolotl_head": {
       "textures": "textures/blocks/heads/axolotl_head"
     },
+    "mh_axolotl_wild_head": {
+      "textures": "textures/blocks/heads/axolotl_wild_head"
+    },
+    "mh_axolotl_gold_head": {
+      "textures": "textures/blocks/heads/axolotl_gold_head"
+    },
+    "mh_axolotl_cyan_head": {
+      "textures": "textures/blocks/heads/axolotl_cyan_head"
+    },
+    "mh_axolotl_blue_head": {
+      "textures": "textures/blocks/heads/axolotl_blue_head"
+    },
     "mh_bat_head": {
       "textures": "textures/blocks/heads/bat_head"
     },
@@ -21,6 +33,36 @@
     },
     "mh_cat_head": {
       "textures": "textures/blocks/heads/cat_head"
+    },
+    "mh_cat_tuxedo_head": {
+      "textures": "textures/blocks/heads/cat_tuxedo_head"
+    },
+    "mh_cat_red_head": {
+      "textures": "textures/blocks/heads/cat_red_head"
+    },
+    "mh_cat_siamese_head": {
+      "textures": "textures/blocks/heads/cat_siamese_head"
+    },
+    "mh_cat_british_shorthair_head": {
+      "textures": "textures/blocks/heads/cat_british_shorthair_head"
+    },
+    "mh_cat_calico_head": {
+      "textures": "textures/blocks/heads/cat_calico_head"
+    },
+    "mh_cat_persian_head": {
+      "textures": "textures/blocks/heads/cat_persian_head"
+    },
+    "mh_cat_ragdoll_head": {
+      "textures": "textures/blocks/heads/cat_ragdoll_head"
+    },
+    "mh_cat_white_head": {
+      "textures": "textures/blocks/heads/cat_white_head"
+    },
+    "mh_cat_jellie_head": {
+      "textures": "textures/blocks/heads/cat_jellie_head"
+    },
+    "mh_cat_black_head": {
+      "textures": "textures/blocks/heads/cat_black_head"
     },
     "mh_chicken_head": {
       "textures": "textures/blocks/heads/chicken_head"
@@ -37,14 +79,35 @@
     "mh_copper_golem_head": {
       "textures": "textures/blocks/heads/copper_golem_head"
     },
+    "mh_copper_golem_exposed_head": {
+      "textures": "textures/blocks/heads/copper_golem_exposed_head"
+    },
+    "mh_copper_golem_weathered_head": {
+      "textures": "textures/blocks/heads/copper_golem_weathered_head"
+    },
+    "mh_copper_golem_oxidized_head": {
+      "textures": "textures/blocks/heads/copper_golem_oxidized_head"
+    },
     "mh_cow_head": {
       "textures": "textures/blocks/heads/cow_head"
+    },
+    "mh_cow_warm_head": {
+      "textures": "textures/blocks/heads/cow_warm_head"
+    },
+    "mh_cow_cold_head": {
+      "textures": "textures/blocks/heads/cow_cold_head"
     },
     "mh_donkey_head": {
       "textures": "textures/blocks/heads/donkey_head"
     },
     "mh_frog_head": {
       "textures": "textures/blocks/heads/frog_head"
+    },
+    "mh_frog_cold_head": {
+      "textures": "textures/blocks/heads/frog_cold_head"
+    },
+    "mh_frog_warm_head": {
+      "textures": "textures/blocks/heads/frog_warm_head"
     },
     "mh_glow_squid_head": {
       "textures": "textures/blocks/heads/glow_squid_head"
@@ -54,6 +117,24 @@
     },
     "mh_horse_head": {
       "textures": "textures/blocks/heads/horse_head"
+    },
+    "mh_horse_white_head": {
+      "textures": "textures/blocks/heads/horse_white_head"
+    },
+    "mh_horse_creamy_head": {
+      "textures": "textures/blocks/heads/horse_creamy_head"
+    },
+    "mh_horse_chestnut_head": {
+      "textures": "textures/blocks/heads/horse_chestnut_head"
+    },
+    "mh_horse_black_head": {
+      "textures": "textures/blocks/heads/horse_black_head"
+    },
+    "mh_horse_gray_head": {
+      "textures": "textures/blocks/heads/horse_gray_head"
+    },
+    "mh_horse_dark_brown_head": {
+      "textures": "textures/blocks/heads/horse_dark_brown_head"
     },
     "mh_mooshroom_head": {
       "textures": "textures/blocks/heads/mooshroom_head"

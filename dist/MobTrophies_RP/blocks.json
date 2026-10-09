@@ -13,6 +13,18 @@
   "mh:axolotl_head": {
     "sound": "stone"
   },
+  "mh:axolotl_wild_head": {
+    "sound": "stone"
+  },
+  "mh:axolotl_gold_head": {
+    "sound": "stone"
+  },
+  "mh:axolotl_cyan_head": {
+    "sound": "stone"
+  },
+  "mh:axolotl_blue_head": {
+    "sound": "stone"
+  },
   "mh:bat_head": {
     "sound": "stone"
   },
@@ -20,6 +32,36 @@
     "sound": "stone"
   },
   "mh:cat_head": {
+    "sound": "stone"
+  },
+  "mh:cat_tuxedo_head": {
+    "sound": "stone"
+  },
+  "mh:cat_red_head": {
+    "sound": "stone"
+  },
+  "mh:cat_siamese_head": {
+    "sound": "stone"
+  },
+  "mh:cat_british_shorthair_head": {
+    "sound": "stone"
+  },
+  "mh:cat_calico_head": {
+    "sound": "stone"
+  },
+  "mh:cat_persian_head": {
+    "sound": "stone"
+  },
+  "mh:cat_ragdoll_head": {
+    "sound": "stone"
+  },
+  "mh:cat_white_head": {
+    "sound": "stone"
+  },
+  "mh:cat_jellie_head": {
+    "sound": "stone"
+  },
+  "mh:cat_black_head": {
     "sound": "stone"
   },
   "mh:chicken_head": {
@@ -37,13 +79,34 @@
   "mh:copper_golem_head": {
     "sound": "stone"
   },
+  "mh:copper_golem_exposed_head": {
+    "sound": "stone"
+  },
+  "mh:copper_golem_weathered_head": {
+    "sound": "stone"
+  },
+  "mh:copper_golem_oxidized_head": {
+    "sound": "stone"
+  },
   "mh:cow_head": {
+    "sound": "stone"
+  },
+  "mh:cow_warm_head": {
+    "sound": "stone"
+  },
+  "mh:cow_cold_head": {
     "sound": "stone"
   },
   "mh:donkey_head": {
     "sound": "stone"
   },
   "mh:frog_head": {
+    "sound": "stone"
+  },
+  "mh:frog_cold_head": {
+    "sound": "stone"
+  },
+  "mh:frog_warm_head": {
     "sound": "stone"
   },
   "mh:glow_squid_head": {
@@ -53,6 +116,24 @@
     "sound": "stone"
   },
   "mh:horse_head": {
+    "sound": "stone"
+  },
+  "mh:horse_white_head": {
+    "sound": "stone"
+  },
+  "mh:horse_creamy_head": {
+    "sound": "stone"
+  },
+  "mh:horse_chestnut_head": {
+    "sound": "stone"
+  },
+  "mh:horse_black_head": {
+    "sound": "stone"
+  },
+  "mh:horse_gray_head": {
+    "sound": "stone"
+  },
+  "mh:horse_dark_brown_head": {
     "sound": "stone"
   },
   "mh:mooshroom_head": {
