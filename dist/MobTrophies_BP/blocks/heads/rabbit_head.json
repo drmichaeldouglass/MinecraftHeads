@@ -3,9 +3,6 @@
   "minecraft:block": {
     "description": {
       "identifier": "mh:rabbit_head",
-      "menu_category": {
-        "category": "items"
-      },
       "traits": {
         "minecraft:placement_position": {
           "enabled_states": [
@@ -66,7 +63,7 @@
         "explosion_resistance": 1
       },
       "minecraft:light_dampening": 0,
-      "minecraft:map_color": "#9a7553",
+      "minecraft:map_color": "#8c6a4b",
       "tag:mh_trophy": {}
     },
     "permutations": [

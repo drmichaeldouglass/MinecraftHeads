@@ -3,9 +3,6 @@
   "minecraft:block": {
     "description": {
       "identifier": "mh:glow_squid_head",
-      "menu_category": {
-        "category": "items"
-      },
       "traits": {
         "minecraft:placement_position": {
           "enabled_states": [
@@ -66,7 +63,7 @@
         "explosion_resistance": 1
       },
       "minecraft:light_dampening": 0,
-      "minecraft:map_color": "#1f6f74",
+      "minecraft:map_color": "#155a63",
       "tag:mh_trophy": {}
     },
     "permutations": [

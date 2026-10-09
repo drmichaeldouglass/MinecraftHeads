@@ -1,0 +1,123 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.mh.ghast_head.worn",
+        "texture_width": 64,
+        "texture_height": 64,
+        "visible_bounds_width": 3,
+        "visible_bounds_height": 3.09375,
+        "visible_bounds_offset": [
+          0,
+          1.5,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "waist",
+          "pivot": [
+            0,
+            12,
+            0
+          ]
+        },
+        {
+          "name": "body",
+          "parent": "waist",
+          "pivot": [
+            0,
+            24,
+            0
+          ]
+        },
+        {
+          "name": "head",
+          "parent": "body",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5.0,
+                23.5,
+                -5.0
+              ],
+              "size": [
+                10.0,
+                10.0,
+                10.0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    10,
+                    10
+                  ],
+                  "uv_size": [
+                    10,
+                    10
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    0,
+                    10
+                  ],
+                  "uv_size": [
+                    10,
+                    10
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    30,
+                    10
+                  ],
+                  "uv_size": [
+                    10,
+                    10
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    20,
+                    10
+                  ],
+                  "uv_size": [
+                    10,
+                    10
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    10,
+                    0
+                  ],
+                  "uv_size": [
+                    10,
+                    10
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    20,
+                    10
+                  ],
+                  "uv_size": [
+                    10,
+                    -10
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

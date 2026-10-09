@@ -3,9 +3,6 @@
   "minecraft:block": {
     "description": {
       "identifier": "mh:tadpole_head",
-      "menu_category": {
-        "category": "items"
-      },
       "traits": {
         "minecraft:placement_position": {
           "enabled_states": [
@@ -66,7 +63,7 @@
         "explosion_resistance": 1
       },
       "minecraft:light_dampening": 0,
-      "minecraft:map_color": "#5a3e2b",
+      "minecraft:map_color": "#4c3524",
       "tag:mh_trophy": {}
     },
     "permutations": [
@@ -153,7 +150,7 @@
             "origin": [
               -3.0,
               6.0,
-              2.0
+              -2.0
             ],
             "size": [
               6,
@@ -165,7 +162,7 @@
             "origin": [
               -3.0,
               6.0,
-              2.0
+              -2.0
             ],
             "size": [
               6,
@@ -265,7 +262,7 @@
             "origin": [
               -3.0,
               6.0,
-              2.0
+              -2.0
             ],
             "size": [
               6,
@@ -277,7 +274,7 @@
             "origin": [
               -3.0,
               6.0,
-              2.0
+              -2.0
             ],
             "size": [
               6,
@@ -377,7 +374,7 @@
             "origin": [
               -3.0,
               6.0,
-              2.0
+              -2.0
             ],
             "size": [
               6,
@@ -389,7 +386,7 @@
             "origin": [
               -3.0,
               6.0,
-              2.0
+              -2.0
             ],
             "size": [
               6,
@@ -489,7 +486,7 @@
             "origin": [
               -3.0,
               6.0,
-              2.0
+              -2.0
             ],
             "size": [
               6,
@@ -501,7 +498,7 @@
             "origin": [
               -3.0,
               6.0,
-              2.0
+              -2.0
             ],
             "size": [
               6,

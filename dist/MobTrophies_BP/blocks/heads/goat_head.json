@@ -3,9 +3,6 @@
   "minecraft:block": {
     "description": {
       "identifier": "mh:goat_head",
-      "menu_category": {
-        "category": "items"
-      },
       "traits": {
         "minecraft:placement_position": {
           "enabled_states": [
@@ -37,25 +34,25 @@
       },
       "minecraft:collision_box": {
         "origin": [
-          -3.0,
+          -2.5,
           0,
           -3.0
         ],
         "size": [
-          6,
-          6,
+          5,
+          7,
           6
         ]
       },
       "minecraft:selection_box": {
         "origin": [
-          -3.0,
+          -2.5,
           0,
           -3.0
         ],
         "size": [
-          6,
-          6,
+          5,
+          7,
           6
         ]
       },
@@ -66,7 +63,7 @@
         "explosion_resistance": 1
       },
       "minecraft:light_dampening": 0,
-      "minecraft:map_color": "#e2ddd2",
+      "minecraft:map_color": "#e6e1d5",
       "tag:mh_trophy": {}
     },
     "permutations": [
@@ -101,25 +98,25 @@
           },
           "minecraft:collision_box": {
             "origin": [
-              -3.0,
-              6,
+              -2.5,
+              3,
               -3.0
             ],
             "size": [
-              6,
-              6,
+              5,
+              7,
               6
             ]
           },
           "minecraft:selection_box": {
             "origin": [
-              -3.0,
-              6,
+              -2.5,
+              3,
               -3.0
             ],
             "size": [
-              6,
-              6,
+              5,
+              7,
               6
             ]
           },
@@ -151,25 +148,25 @@
           },
           "minecraft:collision_box": {
             "origin": [
-              -3.0,
-              5.0,
+              -2.5,
+              3,
               2.0
             ],
             "size": [
-              6,
-              6,
+              5,
+              7,
               6
             ]
           },
           "minecraft:selection_box": {
             "origin": [
-              -3.0,
-              5.0,
+              -2.5,
+              3,
               2.0
             ],
             "size": [
-              6,
-              6,
+              5,
+              7,
               6
             ]
           },
@@ -213,25 +210,25 @@
           },
           "minecraft:collision_box": {
             "origin": [
-              -3.0,
-              6,
+              -2.5,
+              3,
               -3.0
             ],
             "size": [
-              6,
-              6,
+              5,
+              7,
               6
             ]
           },
           "minecraft:selection_box": {
             "origin": [
-              -3.0,
-              6,
+              -2.5,
+              3,
               -3.0
             ],
             "size": [
-              6,
-              6,
+              5,
+              7,
               6
             ]
           },
@@ -263,25 +260,25 @@
           },
           "minecraft:collision_box": {
             "origin": [
-              -3.0,
-              5.0,
+              -2.5,
+              3,
               2.0
             ],
             "size": [
-              6,
-              6,
+              5,
+              7,
               6
             ]
           },
           "minecraft:selection_box": {
             "origin": [
-              -3.0,
-              5.0,
+              -2.5,
+              3,
               2.0
             ],
             "size": [
-              6,
-              6,
+              5,
+              7,
               6
             ]
           },
@@ -325,25 +322,25 @@
           },
           "minecraft:collision_box": {
             "origin": [
-              -3.0,
-              6,
+              -2.5,
+              3,
               -3.0
             ],
             "size": [
-              6,
-              6,
+              5,
+              7,
               6
             ]
           },
           "minecraft:selection_box": {
             "origin": [
-              -3.0,
-              6,
+              -2.5,
+              3,
               -3.0
             ],
             "size": [
-              6,
-              6,
+              5,
+              7,
               6
             ]
           },
@@ -375,25 +372,25 @@
           },
           "minecraft:collision_box": {
             "origin": [
-              -3.0,
-              5.0,
+              -2.5,
+              3,
               2.0
             ],
             "size": [
-              6,
-              6,
+              5,
+              7,
               6
             ]
           },
           "minecraft:selection_box": {
             "origin": [
-              -3.0,
-              5.0,
+              -2.5,
+              3,
               2.0
             ],
             "size": [
-              6,
-              6,
+              5,
+              7,
               6
             ]
           },
@@ -437,25 +434,25 @@
           },
           "minecraft:collision_box": {
             "origin": [
-              -3.0,
-              6,
+              -2.5,
+              3,
               -3.0
             ],
             "size": [
-              6,
-              6,
+              5,
+              7,
               6
             ]
           },
           "minecraft:selection_box": {
             "origin": [
-              -3.0,
-              6,
+              -2.5,
+              3,
               -3.0
             ],
             "size": [
-              6,
-              6,
+              5,
+              7,
               6
             ]
           },
@@ -487,25 +484,25 @@
           },
           "minecraft:collision_box": {
             "origin": [
-              -3.0,
-              5.0,
+              -2.5,
+              3,
               2.0
             ],
             "size": [
-              6,
-              6,
+              5,
+              7,
               6
             ]
           },
           "minecraft:selection_box": {
             "origin": [
-              -3.0,
-              5.0,
+              -2.5,
+              3,
               2.0
             ],
             "size": [
-              6,
-              6,
+              5,
+              7,
               6
             ]
           },

@@ -3,9 +3,6 @@
   "minecraft:block": {
     "description": {
       "identifier": "mh:zoglin_head",
-      "menu_category": {
-        "category": "items"
-      },
       "traits": {
         "minecraft:placement_position": {
           "enabled_states": [
@@ -37,25 +34,25 @@
       },
       "minecraft:collision_box": {
         "origin": [
-          -4.0,
+          -6.0,
           0,
           -4.0
         ],
         "size": [
+          12,
           8,
-          7,
           8
         ]
       },
       "minecraft:selection_box": {
         "origin": [
-          -4.0,
+          -6.0,
           0,
           -4.0
         ],
         "size": [
+          12,
           8,
-          7,
           8
         ]
       },
@@ -66,7 +63,7 @@
         "explosion_resistance": 1
       },
       "minecraft:light_dampening": 0,
-      "minecraft:map_color": "#d9a6a0",
+      "minecraft:map_color": "#d8a19a",
       "tag:mh_trophy": {}
     },
     "permutations": [
@@ -101,25 +98,25 @@
           },
           "minecraft:collision_box": {
             "origin": [
-              -4.0,
-              9,
+              -6.0,
+              6,
               -4.0
             ],
             "size": [
+              12,
               8,
-              7,
               8
             ]
           },
           "minecraft:selection_box": {
             "origin": [
-              -4.0,
-              9,
+              -6.0,
+              6,
               -4.0
             ],
             "size": [
+              12,
               8,
-              7,
               8
             ]
           },
@@ -151,25 +148,25 @@
           },
           "minecraft:collision_box": {
             "origin": [
-              -4.0,
-              4.5,
+              -6.0,
+              4.0,
               0.0
             ],
             "size": [
+              12,
               8,
-              7,
               8
             ]
           },
           "minecraft:selection_box": {
             "origin": [
-              -4.0,
-              4.5,
+              -6.0,
+              4.0,
               0.0
             ],
             "size": [
+              12,
               8,
-              7,
               8
             ]
           },
@@ -213,25 +210,25 @@
           },
           "minecraft:collision_box": {
             "origin": [
-              -4.0,
-              9,
+              -6.0,
+              6,
               -4.0
             ],
             "size": [
+              12,
               8,
-              7,
               8
             ]
           },
           "minecraft:selection_box": {
             "origin": [
-              -4.0,
-              9,
+              -6.0,
+              6,
               -4.0
             ],
             "size": [
+              12,
               8,
-              7,
               8
             ]
           },
@@ -263,25 +260,25 @@
           },
           "minecraft:collision_box": {
             "origin": [
-              -4.0,
-              4.5,
+              -6.0,
+              4.0,
               0.0
             ],
             "size": [
+              12,
               8,
-              7,
               8
             ]
           },
           "minecraft:selection_box": {
             "origin": [
-              -4.0,
-              4.5,
+              -6.0,
+              4.0,
               0.0
             ],
             "size": [
+              12,
               8,
-              7,
               8
             ]
           },
@@ -325,25 +322,25 @@
           },
           "minecraft:collision_box": {
             "origin": [
-              -4.0,
-              9,
+              -6.0,
+              6,
               -4.0
             ],
             "size": [
+              12,
               8,
-              7,
               8
             ]
           },
           "minecraft:selection_box": {
             "origin": [
-              -4.0,
-              9,
+              -6.0,
+              6,
               -4.0
             ],
             "size": [
+              12,
               8,
-              7,
               8
             ]
           },
@@ -375,25 +372,25 @@
           },
           "minecraft:collision_box": {
             "origin": [
-              -4.0,
-              4.5,
+              -6.0,
+              4.0,
               0.0
             ],
             "size": [
+              12,
               8,
-              7,
               8
             ]
           },
           "minecraft:selection_box": {
             "origin": [
-              -4.0,
-              4.5,
+              -6.0,
+              4.0,
               0.0
             ],
             "size": [
+              12,
               8,
-              7,
               8
             ]
           },
@@ -437,25 +434,25 @@
           },
           "minecraft:collision_box": {
             "origin": [
-              -4.0,
-              9,
+              -6.0,
+              6,
               -4.0
             ],
             "size": [
+              12,
               8,
-              7,
               8
             ]
           },
           "minecraft:selection_box": {
             "origin": [
-              -4.0,
-              9,
+              -6.0,
+              6,
               -4.0
             ],
             "size": [
+              12,
               8,
-              7,
               8
             ]
           },
@@ -487,25 +484,25 @@
           },
           "minecraft:collision_box": {
             "origin": [
-              -4.0,
-              4.5,
+              -6.0,
+              4.0,
               0.0
             ],
             "size": [
+              12,
               8,
-              7,
               8
             ]
           },
           "minecraft:selection_box": {
             "origin": [
-              -4.0,
-              4.5,
+              -6.0,
+              4.0,
               0.0
             ],
             "size": [
+              12,
               8,
-              7,
               8
             ]
           },

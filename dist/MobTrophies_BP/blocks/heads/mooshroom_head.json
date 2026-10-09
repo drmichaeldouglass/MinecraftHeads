@@ -3,9 +3,6 @@
   "minecraft:block": {
     "description": {
       "identifier": "mh:mooshroom_head",
-      "menu_category": {
-        "category": "items"
-      },
       "traits": {
         "minecraft:placement_position": {
           "enabled_states": [
@@ -66,7 +63,7 @@
         "explosion_resistance": 1
       },
       "minecraft:light_dampening": 0,
-      "minecraft:map_color": "#a3241f",
+      "minecraft:map_color": "#a8231d",
       "tag:mh_trophy": {}
     },
     "permutations": [
@@ -102,7 +99,7 @@
           "minecraft:collision_box": {
             "origin": [
               -4.0,
-              5,
+              3,
               -3.0
             ],
             "size": [
@@ -114,7 +111,7 @@
           "minecraft:selection_box": {
             "origin": [
               -4.0,
-              5,
+              3,
               -3.0
             ],
             "size": [
@@ -152,7 +149,7 @@
           "minecraft:collision_box": {
             "origin": [
               -4.0,
-              4.0,
+              3,
               2.0
             ],
             "size": [
@@ -164,7 +161,7 @@
           "minecraft:selection_box": {
             "origin": [
               -4.0,
-              4.0,
+              3,
               2.0
             ],
             "size": [
@@ -214,7 +211,7 @@
           "minecraft:collision_box": {
             "origin": [
               -4.0,
-              5,
+              3,
               -3.0
             ],
             "size": [
@@ -226,7 +223,7 @@
           "minecraft:selection_box": {
             "origin": [
               -4.0,
-              5,
+              3,
               -3.0
             ],
             "size": [
@@ -264,7 +261,7 @@
           "minecraft:collision_box": {
             "origin": [
               -4.0,
-              4.0,
+              3,
               2.0
             ],
             "size": [
@@ -276,7 +273,7 @@
           "minecraft:selection_box": {
             "origin": [
               -4.0,
-              4.0,
+              3,
               2.0
             ],
             "size": [
@@ -326,7 +323,7 @@
           "minecraft:collision_box": {
             "origin": [
               -4.0,
-              5,
+              3,
               -3.0
             ],
             "size": [
@@ -338,7 +335,7 @@
           "minecraft:selection_box": {
             "origin": [
               -4.0,
-              5,
+              3,
               -3.0
             ],
             "size": [
@@ -376,7 +373,7 @@
           "minecraft:collision_box": {
             "origin": [
               -4.0,
-              4.0,
+              3,
               2.0
             ],
             "size": [
@@ -388,7 +385,7 @@
           "minecraft:selection_box": {
             "origin": [
               -4.0,
-              4.0,
+              3,
               2.0
             ],
             "size": [
@@ -438,7 +435,7 @@
           "minecraft:collision_box": {
             "origin": [
               -4.0,
-              5,
+              3,
               -3.0
             ],
             "size": [
@@ -450,7 +447,7 @@
           "minecraft:selection_box": {
             "origin": [
               -4.0,
-              5,
+              3,
               -3.0
             ],
             "size": [
@@ -488,7 +485,7 @@
           "minecraft:collision_box": {
             "origin": [
               -4.0,
-              4.0,
+              3,
               2.0
             ],
             "size": [
@@ -500,7 +497,7 @@
           "minecraft:selection_box": {
             "origin": [
               -4.0,
-              4.0,
+              3,
               2.0
             ],
             "size": [

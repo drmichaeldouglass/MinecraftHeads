@@ -3,9 +3,6 @@
   "minecraft:block": {
     "description": {
       "identifier": "mh:snow_golem_head",
-      "menu_category": {
-        "category": "items"
-      },
       "traits": {
         "minecraft:placement_position": {
           "enabled_states": [
@@ -102,7 +99,7 @@
           "minecraft:collision_box": {
             "origin": [
               -4.0,
-              6,
+              5,
               -4.0
             ],
             "size": [
@@ -114,7 +111,7 @@
           "minecraft:selection_box": {
             "origin": [
               -4.0,
-              6,
+              5,
               -4.0
             ],
             "size": [
@@ -214,7 +211,7 @@
           "minecraft:collision_box": {
             "origin": [
               -4.0,
-              6,
+              5,
               -4.0
             ],
             "size": [
@@ -226,7 +223,7 @@
           "minecraft:selection_box": {
             "origin": [
               -4.0,
-              6,
+              5,
               -4.0
             ],
             "size": [
@@ -326,7 +323,7 @@
           "minecraft:collision_box": {
             "origin": [
               -4.0,
-              6,
+              5,
               -4.0
             ],
             "size": [
@@ -338,7 +335,7 @@
           "minecraft:selection_box": {
             "origin": [
               -4.0,
-              6,
+              5,
               -4.0
             ],
             "size": [
@@ -438,7 +435,7 @@
           "minecraft:collision_box": {
             "origin": [
               -4.0,
-              6,
+              5,
               -4.0
             ],
             "size": [
@@ -450,7 +447,7 @@
           "minecraft:selection_box": {
             "origin": [
               -4.0,
-              6,
+              5,
               -4.0
             ],
             "size": [

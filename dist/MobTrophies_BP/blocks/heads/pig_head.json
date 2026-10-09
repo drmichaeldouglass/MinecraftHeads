@@ -3,9 +3,6 @@
   "minecraft:block": {
     "description": {
       "identifier": "mh:pig_head",
-      "menu_category": {
-        "category": "items"
-      },
       "traits": {
         "minecraft:placement_position": {
           "enabled_states": [
@@ -66,7 +63,7 @@
         "explosion_resistance": 1
       },
       "minecraft:light_dampening": 0,
-      "minecraft:map_color": "#efa8a3",
+      "minecraft:map_color": "#f0a5a2",
       "tag:mh_trophy": {}
     },
     "permutations": [
