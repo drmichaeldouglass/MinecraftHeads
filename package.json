@@ -1,0 +1,13 @@
+{
+  "name": "mob-trophies",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "check": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@minecraft/server": "2.0.0",
+    "typescript": "7.0.2"
+  }
+}

@@ -25,3 +25,7 @@ replay_pid*
 
 # Python
 __pycache__/
+
+# Optional JavaScript development checks
+node_modules/
+
