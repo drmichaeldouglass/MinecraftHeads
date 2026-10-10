@@ -6,19 +6,24 @@ Usage:  python3 tools/preview.py                (run tools/build.py first)
 
 Reads the generated geometry and textures from the resource pack, so it
 doubles as a check that the UV mapping lines up. By default writes
-docs/heads_preview.png (every head, seen from the front) and
-docs/worn_preview.png (a few heads worn by a player).
+docs/heads_preview.png (every head, seen from the front),
+docs/worn_preview.png (a few heads worn by a player) and one ability card
+sheet per category, docs/abilities_<category>.png (each mob's head with the
+powers it grants when worn, read from src/scripts/abilities.js).
 
   --only a,b   only mobs whose key starts with one of these (variants included)
   --back       add a second view of each head from behind
   --worn       render the worn model on a player instead of the placed block
   --out PATH   where to write the sheet
   --zoom N     draw each head N times bigger (handy for checking detail)
+  --abilities  only write the ability card sheets
 """
 
 import argparse
 import json
 import math
+import random
+import re
 import sys
 from pathlib import Path
 
@@ -31,6 +36,8 @@ ROOT = Path(__file__).resolve().parent.parent
 RP = ROOT / "dist" / "MobTrophies_RP"
 OUT = ROOT / "docs" / "heads_preview.png"
 WORN_OUT = ROOT / "docs" / "worn_preview.png"
+ABILITIES_JS = ROOT / "src" / "scripts" / "abilities.js"
+CATEGORIES = ["Passive", "Neutral", "Hostile", "Boss"]
 WORN_SHOWCASE = ["cow", "chicken", "cat_tuxedo", "fox", "villager_desert", "witch",
                  "axolotl_blue", "enderman", "frog", "iron_golem", "panda", "sheep_lime"]
 
@@ -172,9 +179,9 @@ def render(key, yaw=0, worn=False):
     return draw_model([(cubes, tex, None)], size, yaw)
 
 
-def label_font():
+def label_font(size=12, bold=False):
     try:
-        return ImageFont.truetype("DejaVuSans.ttf", 12)
+        return ImageFont.truetype("DejaVuSans-Bold.ttf" if bold else "DejaVuSans.ttf", size)
     except OSError:
         return ImageFont.load_default()
 
@@ -206,6 +213,166 @@ def sheet(heads, out, back=False, worn=False):
     print(f"Wrote {out}")
 
 
+# ---------------------------------------------------------------------------
+# Ability cards
+# ---------------------------------------------------------------------------
+
+# The six vanilla heads have no generated model, so the cards draw a simple
+# stand-in: (cubes, front art) where each cube is (origin, size, palette) and
+# the front art covers the first cube's north face.
+VANILLA_ART = {
+    "creeper": ([((-4, 0, -4), (8, 8, 8), {".": (94, 168, 70), "#": (20, 20, 20)})],
+                ["........", "........", ".##..##.", ".##..##.",
+                 "...##...", "..####..", "..####..", "..#..#.."]),
+    "zombie": ([((-4, 0, -4), (8, 8, 8), {".": (82, 130, 72), "h": (52, 88, 46),
+                                          "#": (25, 40, 25), "n": (60, 100, 54)})],
+               ["hhhhhhhh", "h......h", "........", ".##..##.",
+                "...nn...", "........", "..nnnn..", "........"]),
+    "skeleton": ([((-4, 0, -4), (8, 8, 8), {".": (196, 196, 190), "#": (60, 60, 60),
+                                            "t": (150, 150, 145)})],
+                 ["........", "........", "........", ".##..##.",
+                  ".##..##.", "...##...", ".t.t.t..", "........"]),
+    "wither_skeleton": ([((-4, 0, -4), (8, 8, 8), {".": (52, 52, 52), "#": (14, 14, 14),
+                                                   "t": (80, 80, 80)})],
+                        ["........", "........", "........", ".##..##.",
+                         ".##..##.", "...##...", ".t.t.t..", "........"]),
+    "piglin": ([((-5, 0, -4), (10, 8, 8), {".": (226, 152, 140), "w": (240, 240, 240),
+                                           "#": (30, 30, 30), "b": (190, 120, 110)}),
+                ((-2, 0.5, -5), (4, 3, 1), {".": (236, 170, 160)})],
+               ["bbbbbbbbbb", "..........", "..........", "..w#..#w..",
+                "..........", "..........", "..........", ".........."]),
+    "ender_dragon": ([((-4, 0, -4), (8, 8, 8), {".": (34, 30, 38), "p": (204, 102, 220),
+                                                "s": (54, 48, 60)}),
+                      ((-3, 0, -10), (6, 4, 6), {".": (44, 40, 50)})],
+                     ["s......s", "ss....ss", ".pp..pp.", "........",
+                      "........", "........", "........", "........"]),
+}
+
+
+def vanilla_parts(key):
+    """Cubes and textures for a vanilla head stand-in."""
+    rnd = random.Random(key)
+    cubes, front = VANILLA_ART[key]
+    parts = []
+    for n, (origin, (w, h, d), pal) in enumerate(cubes):
+        tw, th = math.ceil(w + d + w), math.ceil(max(h, d))
+        tex = Image.new("RGBA", (tw, th))
+
+        def shade(rgb):
+            k = rnd.uniform(0.9, 1.06)
+            return tuple(min(255, int(c * k)) for c in rgb) + (255,)
+
+        for y in range(th):
+            for x in range(tw):
+                ch = "."
+                if n == 0 and x < w and y < len(front):
+                    ch = front[y][x]
+                tex.putpixel((x, y), shade(pal[ch]))
+        uv = {"north": {"uv": [0, 0], "uv_size": [w, h]},
+              "east": {"uv": [w, 0], "uv_size": [d, h]},
+              "up": {"uv": [w + d, 0], "uv_size": [w, d]}}
+        uv["south"], uv["west"] = uv["north"], uv["east"]
+        parts.append(([{"origin": list(origin), "size": [w, h, d], "uv": uv}], tex, None))
+    return parts
+
+
+def ability_descriptions():
+    """Mob key -> the ability text shown in game (see abilityDescription())."""
+    out = {}
+    for line in ABILITIES_JS.read_text().splitlines():
+        m = re.match(r'\s*(\w+): P\("([^"]+)"', line)
+        if m:
+            text = m.group(2)
+            if re.search(r"\bfly\b", line[m.end():]):
+                text += " Hold Jump to rise; crouch to descend."
+            out[m.group(1)] = text
+    return out
+
+
+# (label, colour, test on the description) for the little tags on each card.
+TAGS = [
+    ("Flight", (88, 140, 214), lambda d: "Flight" in d),
+    ("Climb", (140, 96, 60), lambda d: "climb" in d),
+    ("Water", (40, 150, 170), lambda d: "Underwater" in d),
+    ("Crouch power", (176, 92, 196), lambda d: "Crouch" in d or "crouch:" in d),
+    ("Melee", (200, 70, 60), lambda d: "melee" in d.lower()),
+]
+
+CARD_W, CARD_H, CARD_COLS = 400, 150, 4
+HEAD_BOX = 130
+
+
+def ability_card(mob, text):
+    variants = len(trophies(mob))
+    head = trophies(mob)[0]
+    card = Image.new("RGBA", (CARD_W, CARD_H), (74, 66, 60, 255))
+    draw = ImageDraw.Draw(card)
+    draw.rectangle((0, 0, CARD_W - 1, CARD_H - 1), outline=(104, 94, 84), width=2)
+    draw.rectangle((8, 10, 8 + HEAD_BOX, 10 + HEAD_BOX), fill=(58, 52, 48))
+    if head.vanilla_item:
+        img = draw_model(vanilla_parts(head.key), (HEAD_BOX, HEAD_BOX))
+    else:
+        cubes, tex = load(head.key)
+        img = draw_model([(cubes, tex, None)], (HEAD_BOX, HEAD_BOX))
+    card.alpha_composite(img, (8, 10))
+
+    x = 8 + HEAD_BOX + 12
+    name = mob.name.replace(" Head", "").replace(" Skull", "")
+    draw.text((x, 10), name, fill=(250, 238, 214), font=label_font(17, bold=True))
+    sub = f"{variants} variants" if variants > 1 else "1 head"
+    if head.vanilla_item:
+        sub = "Vanilla head"
+    elif head.experimental:
+        sub += " (bonus)"
+    draw.text((x, 32), sub, fill=(196, 184, 164), font=label_font(12))
+
+    font = label_font(13)
+    lines, max_w = [""], CARD_W - x - 10
+    for word in text.split():
+        trial = f"{lines[-1]} {word}".strip()
+        if lines[-1] and draw.textlength(trial, font=font) > max_w:
+            lines.append(word)
+        else:
+            lines[-1] = trial
+    for n, line in enumerate(lines[:5]):
+        draw.text((x, 52 + 16 * n), line, fill=(240, 232, 218), font=font)
+
+    tx, tag_font = x, label_font(11, bold=True)
+    for label, colour, test in TAGS:
+        if not test(text):
+            continue
+        tw = draw.textlength(label, font=tag_font)
+        draw.rounded_rectangle((tx, CARD_H - 24, tx + tw + 12, CARD_H - 8), 7, fill=colour)
+        draw.text((tx + 6, CARD_H - 23), label, fill=(255, 255, 255), font=tag_font)
+        tx += tw + 18
+    return card
+
+
+def ability_sheets():
+    texts = ability_descriptions()
+    for category in CATEGORIES:
+        mobs = [h for h in HEADS if h.category == category]
+        missing = [h.key for h in mobs if h.key not in texts]
+        if missing:
+            sys.exit(f"no ability in {ABILITIES_JS.name} for: {', '.join(missing)}")
+        cols = min(CARD_COLS, len(mobs))
+        rows = math.ceil(len(mobs) / cols)
+        title_h, gap = 48, 8
+        img = Image.new("RGBA", (cols * (CARD_W + gap) + gap, title_h + rows * (CARD_H + gap)),
+                        (58, 52, 48, 255))
+        draw = ImageDraw.Draw(img)
+        heads = sum(len(trophies(h)) for h in mobs)
+        draw.text((gap + 4, 12), f"{category} mobs: {len(mobs)} mobs, {heads} heads",
+                  fill=(250, 238, 214), font=label_font(22, bold=True))
+        for n, head in enumerate(mobs):
+            card = ability_card(head, texts[head.key])
+            img.alpha_composite(card, (gap + (n % cols) * (CARD_W + gap),
+                                       title_h + (n // cols) * (CARD_H + gap)))
+        out = ROOT / "docs" / f"abilities_{category.lower()}.png"
+        img.convert("RGB").save(out)
+        print(f"Wrote {out}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", help="comma separated mob key prefixes")
@@ -213,7 +380,11 @@ def main():
     ap.add_argument("--worn", action="store_true", help="show heads worn by a player")
     ap.add_argument("--out", help="output PNG path")
     ap.add_argument("--zoom", type=float, default=1, help="cell size multiplier")
+    ap.add_argument("--abilities", action="store_true", help="only write the ability cards")
     args = ap.parse_args()
+    if args.abilities:
+        ability_sheets()
+        return
     global CELL_W, CELL_H
     CELL_W, CELL_H = int(CELL_W * args.zoom), int((CELL_H - LABEL_H) * args.zoom) + LABEL_H
 
@@ -233,6 +404,7 @@ def main():
     keys = {t.key: t for t in heads}
     showcase = [keys[k] for k in WORN_SHOWCASE if k in keys]
     sheet(showcase, WORN_OUT, back=True, worn=True)
+    ability_sheets()
 
 
 if __name__ == "__main__":

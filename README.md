@@ -1,13 +1,23 @@
 # Mob Trophies (Minecraft Bedrock add-on)
 
-Every mob drops its head when a player kills it. Heads can be placed on top of a
-block, mounted on a wall, hung from a ceiling like a trophy, or worn as a hat.
-Collect one head from every mob in the game to become a **Trophy Master**, then
-hunt down every variant.
+**Every mob drops its head.** Mob Trophies is a Minecraft Bedrock add-on that
+makes every mob in the game drop a detailed, hand-drawn head when a player
+kills it. Display your heads as trophies on the floor, walls and ceilings,
+wear them as hats, and gain that mob's powers while you wear one: fly with a
+Bat head, climb walls with a Spider head, teleport with an Enderman head or
+breathe underwater with a Dolphin head. Collect one head from every mob to
+become a **Trophy Master**, then hunt down every variant.
 
 ![All the custom heads](docs/heads_preview.png)
 
-![Heads worn by a player](docs/worn_preview.png)
+## Contents
+
+- [Features](#features)
+- [Installing](#installing)
+- [How to play](#how-to-play)
+- [Every head and its powers](#every-head-and-its-powers)
+- [Commands and settings](#commands-cheats-on)
+- [Editing the heads](#editing-the-heads)
 
 ## Features
 
@@ -26,21 +36,68 @@ hunt down every variant.
   you), mount it on the side of a block, or hang it underneath one.
 - **Wear them**: put a head in your helmet slot to wear it. It is drawn scaled
   up over your own head.
-- **Mob abilities**: every head grants powers while worn. All variants of a
-  mob share its powers, including the six vanilla heads. Fly with a Bat head,
-  climb walls with a Spider head, teleport with an Enderman head, breathe
-  underwater with aquatic heads, or use a Creeper blast.
-- **Collection tracking**: a head counts as collected the first time it lands in
-  your inventory or helmet slot. A mob counts towards the collection once you
-  have any of its variants; every variant is tracked too. Progress is saved per
-  player in the world.
-- **Trophy Ledger**: new players get a Trophy Ledger book. Use it to see your
-  progress, split into Passive, Neutral, Hostile and Boss mobs, with a page per
-  mob listing its variants. Lost it? Craft a new one from a **book + bone**.
-- **Completion reward**: collecting all 87 required heads shows a title and
-  announces it to everyone in the world.
+- **Mob powers**: every head grants abilities while worn, from passive traits
+  like speed and night vision to flight, wall climbing, teleporting and
+  special attacks. All variants of a mob share its powers.
+- **Collection tracking** with a **Trophy Ledger** book that shows your
+  progress, and a world-wide announcement when you collect them all.
+- **No experimental toggles**: works in Survival, Creative, single player,
+  multiplayer and Realms.
 
-### Special cases
+## Installing
+
+You need Minecraft Bedrock Edition **1.21.90 or newer** (iPhone, iPad,
+Android, Windows, Xbox, PlayStation, Switch or Chromebook). Java Edition is
+not supported.
+
+### 1. Get the add-on file
+
+Download [`dist/MobTrophies.mcaddon`](dist/MobTrophies.mcaddon). On the GitHub
+page for the file, use the **download** button (the downward arrow at the top
+right of the file view).
+
+### 2. Import it into Minecraft
+
+- **iPhone / iPad**: the file is saved to the **Files** app (usually in
+  *Downloads*). Open it in Files, tap the **Share** button and choose
+  **Minecraft**. If Minecraft is offered straight away when the download
+  finishes, tap it.
+- **Android**: open the downloaded file from your notifications or the Files
+  app and choose to open it with **Minecraft**.
+- **Windows**: double-click `MobTrophies.mcaddon`.
+- **Consoles**: consoles cannot open `.mcaddon` files. Import the add-on on a
+  phone, tablet or PC, add it to a world (step 3), then upload that world to a
+  Realm or play it with friends on the console.
+
+Minecraft opens and shows *Import started* then *Successfully imported* for
+both the behavior pack and the resource pack.
+
+### 3. Turn it on for a world
+
+1. Create a new world, or tap the pencil icon next to an existing world.
+2. Under **Add-Ons** (or **Behavior Packs** on older menus), find
+   **Mob Trophies** in *Available* and tap **Activate**.
+3. The matching resource pack is added for you. If Minecraft asks to activate
+   it as well, say yes.
+4. Play the world. Other players who join download the packs automatically.
+
+Back up existing worlds before adding any add-on.
+
+### Updating
+
+Import the new `.mcaddon` the same way. Then open the world's settings and
+check that both **Mob Trophies** packs show version **1.2.0**. If an old
+version is still active, deactivate it and activate the new one. Your
+collection progress is kept.
+
+## How to play
+
+### Getting heads
+
+Kill any mob and it drops its head. Melee, arrows, tridents and other
+projectiles all count, and baby mobs drop heads too. Variant mobs drop the
+matching variant head, so a tuxedo cat drops a Tuxedo Cat Head and a lime
+sheep drops a Lime Sheep Head.
 
 | Mob | How to get the head |
 | --- | --- |
@@ -49,53 +106,82 @@ hunt down every variant.
 | Villager, Zombie Villager | Both the old and new villager entity types count. |
 | Sulfur Cube | Bonus head. It is still experimental, so it does not count towards the 87. |
 
-All other mobs must be killed by a player (melee, arrows, tridents and other
-projectiles all count). Baby mobs drop heads too.
+### Displaying heads
 
-## Installing
+Heads place like vanilla skulls:
 
-**iPhone / iPad / Windows / Android:** download
-[`dist/MobTrophies.mcaddon`](dist/MobTrophies.mcaddon) and open it. Minecraft
-imports both packs. Then, when creating or editing a world, activate
-**Mob Trophies** under *Behavior Packs* (the resource pack is added for you).
+- **On top of a block**: the head turns to face you.
+- **On the side of a block**: it is mounted on the wall like a hunting trophy.
+- **Under a block**: it hangs from the ceiling.
 
-Requires Minecraft Bedrock **1.21.90 or newer**. No experimental toggles are
-needed.
+### Wearing heads and using their powers
 
-### Using head powers (version 1.2.0)
+Put a head in your **helmet slot** to wear it. It is drawn scaled up over your
+own head, and you gain the mob's powers straight away. Carrying a head or
+placing it as a trophy does not grant powers. A message tells you the ability
+when you equip it.
 
-Equip the head in the **helmet slot**. Carrying it or placing it as a trophy
-does not grant powers. A message tells you the ability when you equip it;
-the Trophy Ledger category pages also explain every mob's powers.
+![Heads worn by a player](docs/worn_preview.png)
 
-- **Passive traits** activate automatically, such as strength, jumping,
-  fire resistance and underwater breathing.
-- **Crouch once** to activate a special attack or teleport. Release crouch
-  before using it again. Each mob has a cooldown, shared by all its variants.
-- **Flying heads**: hold Jump to rise, use movement controls to steer, release
-  Jump to glide down, and crouch to descend. This works in Survival without
-  changing game mode.
-- **Spider / Cave Spider**: face a wall and hold Jump to climb.
-- **Aquatic heads**: use the normal swimming controls for a swimming boost.
-- **Melee traits**, such as Cave Spider poison or Wither Skeleton Wither,
-  apply when you hit a target.
+| What you want to do | How |
+| --- | --- |
+| Passive traits (speed, strength, night vision, fire resistance, jump boost, underwater breathing) | Nothing to do: they are always on while the head is worn. |
+| Special power (attack, teleport, dash, cleanse) | **Crouch once**. Release crouch before using it again. Each mob has a cooldown, shared by all its variants. |
+| Fly (Bat, Parrot, Allay, Bee, Happy Ghast, Phantom, Vex, Blaze, Ghast, Wither, Dragon) | Hold **Jump** to rise, steer with the movement controls, release Jump to glide down, crouch to descend. Works in Survival. |
+| Climb (Spider, Cave Spider) | Face a wall and hold **Jump**. |
+| Swim faster (aquatic heads) | Use the normal swimming controls. |
+| Melee traits (poison, Wither, fire, knockback, hunger) | Hit a mob while wearing the head. |
 
-Powers are checked every five ticks. Head-granted effects are removed when
-you unequip or swap the head; existing potion and beacon effects are preserved.
-Already-fired projectiles and debuffs on targets finish normally. Cooldowns
-cannot be bypassed by swapping variants or respawning within a session.
-Creeper blasts damage nearby living targets without damaging the wearer or
-breaking blocks. Fire bolts and other magic attacks are aimed strikes that
-do not create terrain-destroying fireballs. Teleporting requires an empty
-destination with ground underneath and stops at obstacles.
+Good to know:
 
-These are playable adaptations of mob traits, not a full transformation into
-the mob. For mobs without a useful player equivalent, the head grants a
-related trait such as resistance, haste or regeneration. See the
-[complete ability list](docs/head-abilities.md) for every head.
+- Head-granted effects are removed when you take off or swap the head. Potion
+  and beacon effects you already had are kept.
+- Cooldowns cannot be skipped by swapping variants or respawning.
+- Creeper blasts hurt nearby mobs without hurting you or breaking blocks.
+  Fire bolts and other magic attacks are aimed strikes that do not destroy
+  terrain.
+- Teleporting needs an empty spot with ground underneath and stops at walls.
+- These are playable takes on each mob's traits, not a full transformation.
+  Mobs without a useful player power give a related trait such as resistance,
+  haste or regeneration.
 
-When updating from an older release, import the new `.mcaddon` and ensure the
-world uses both **1.2.0** packs.
+### Collecting them all
+
+- A head counts as collected the first time it lands in your inventory or
+  helmet slot. A mob counts towards the collection once you have any of its
+  variants, and every variant is tracked too. Progress is saved per player in
+  the world.
+- New players get a **Trophy Ledger** book. Use it to see your progress, split
+  into Passive, Neutral, Hostile and Boss mobs, with a page per mob listing its
+  variants. The category pages also explain every mob's powers. Lost it? Craft a new one from a **book + bone**.
+- Collect all **87 required mob heads** to become a **Trophy Master**: a title
+  appears on screen and the achievement is announced to everyone in the world.
+
+## Every head and its powers
+
+Each card shows the mob's head, how many variant heads it has, and what
+wearing it does. Durations in brackets are cooldowns, and Roman numerals are
+effect levels. Coloured tags mark heads that let you **fly**, **climb**,
+**breathe underwater**, use a **crouch power**, or add a **melee** effect to
+your hits. Every variant of every head is shown in the picture at the top of
+this page. The same list is available as text in
+[docs/head-abilities.md](docs/head-abilities.md).
+
+### Passive mobs
+
+![Passive mob heads and their powers](docs/abilities_passive.png)
+
+### Neutral mobs
+
+![Neutral mob heads and their powers](docs/abilities_neutral.png)
+
+### Hostile mobs
+
+![Hostile mob heads and their powers](docs/abilities_hostile.png)
+
+### Bosses
+
+![Boss heads and their powers](docs/abilities_boss.png)
 
 ## Commands (cheats on)
 
@@ -123,9 +209,10 @@ JSON.
 - `tools/build.py` turns that into blocks, wearable items, block and worn
   geometry, attachables, textures, the language file, `scripts/heads.js` and the
   `.mcaddon`.
-- `tools/preview.py` renders `docs/heads_preview.png` and
-  `docs/worn_preview.png` from the generated geometry and textures, so you can
-  check your art without launching the game.
+- `tools/preview.py` renders `docs/heads_preview.png`,
+  `docs/worn_preview.png` and the `docs/abilities_*.png` cards from the
+  generated geometry and textures, so you can check your art without launching
+  the game. The card text comes from `src/scripts/abilities.js`.
 
 ```sh
 pip install pillow
@@ -133,6 +220,7 @@ python3 tools/build.py
 python3 tools/preview.py
 python3 tools/preview.py --only cat --back --zoom 2 --out cats.png   # one mob, front and back
 python3 tools/preview.py --only cat --worn --out cats_worn.png       # worn by a player
+python3 tools/preview.py --abilities                                 # only the ability cards
 ```
 
 The build output all goes into `dist/`, which is wiped and recreated on every
