@@ -30,11 +30,13 @@ If you changed head art, models or textures, also refresh the preview and
 look at it to check the result:
 
 ```sh
-python3 tools/preview.py   # writes docs/heads_preview.png
+python3 tools/preview.py   # writes docs/heads_preview.png, worn_preview.png, abilities_*.png
 ```
 
 Then commit the regenerated files together with your source change,
-including everything in `dist/` and (if refreshed) `docs/heads_preview.png`.
+including everything in `dist/` and (if refreshed) the images in `docs/`.
+If you changed a head's powers in `src/scripts/abilities.js`, refresh the
+ability cards too (`python3 tools/preview.py --abilities`).
 The `.mcaddon` is committed on purpose so it can be downloaded straight from
 GitHub onto a phone or tablet.
 
