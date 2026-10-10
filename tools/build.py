@@ -35,7 +35,7 @@ RP = DIST / "MobTrophies_RP"
 SCRIPTS_SRC = ROOT / "src" / "scripts"
 
 NS = "mh"
-VERSION = [1, 1, 0]
+VERSION = [1, 2, 0]
 MIN_ENGINE = [1, 21, 90]
 BLOCK_FORMAT = "1.21.90"
 ITEM_FORMAT = "1.21.90"
@@ -748,3 +748,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

@@ -1,6 +1,7 @@
 import { world, system, EquipmentSlot, ItemStack, Player } from "@minecraft/server";
 import { ActionFormData } from "@minecraft/server-ui";
 import { MOBS } from "./heads.js";
+import { abilityDescription, startHeadAbilities } from "./abilities.js";
 
 // ---------------------------------------------------------------------------
 // Settings
@@ -44,6 +45,8 @@ const REQUIRED = MOBS.filter((m) => !m.experimental);
 const BONUS = MOBS.filter((m) => m.experimental);
 const ALL_HEADS = MOBS.flatMap((m) => m.heads);
 const CATEGORIES = ["Passive", "Neutral", "Hostile", "Boss"];
+
+startHeadAbilities(headByItem);
 
 // ---------------------------------------------------------------------------
 // Head drops
@@ -303,7 +306,7 @@ function tick(have, text) {
 function listMobs(mobs, set) {
   return mobs
     .map((m) => {
-      const line = tick(hasMob(m, set), m.name);
+      const line = tick(hasMob(m, set), m.name) + `\n§7${abilityDescription(m.key)}`;
       return m.heads.length > 1 ? `${line} §8(${headCount(m, set)}/${m.heads.length})` : line;
     })
     .join("\n");
@@ -316,6 +319,7 @@ function showVariants(player, mob, back) {
     .title(`${mob.name} heads`)
     .body(
       `Collected §e${headCount(mob, set)}§r of §e${mob.heads.length}§r ${mob.name} heads\n\n` +
+        `§7${abilityDescription(mob.key)}§r\n\n` +
         mob.heads.map((h) => tick(set.has(h.key), h.name)).join("\n")
     )
     .button("Back")
@@ -355,7 +359,9 @@ function showLedger(player) {
         "Kill a mob to make it drop its head, then pick it up.\n" +
         "Many mobs have a different head for each variant: every cat breed, " +
         "sheep colour and villager biome.\n" +
-        "Place heads on the floor or on a wall, or wear them as a helmet!"
+        "Wear a head in your helmet slot to gain its mob abilities!\n" +
+        "Crouch to use a special power; hold Jump to fly or climb.\n" +
+        "Open a category below for each mob's powers and controls."
     );
 
   const pages = [];
@@ -411,3 +417,4 @@ system.afterEvents.scriptEventReceive.subscribe((event) => {
     player.sendMessage("§6[Trophies] §fYour head collection has been reset.");
   }
 });
+
