@@ -86,7 +86,7 @@ Back up existing worlds before adding any add-on.
 ### Updating
 
 Import the new `.mcaddon` the same way. Then open the world's settings and
-check that both **Mob Trophies** packs show version **1.2.0**. If an old
+check that both **Mob Trophies** packs show version **1.2.1**. If an old
 version is still active, deactivate it and activate the new one. Your
 collection progress is kept.
 
@@ -126,7 +126,7 @@ when you equip it.
 | What you want to do | How |
 | --- | --- |
 | Passive traits (speed, strength, night vision, fire resistance, jump boost, underwater breathing) | Nothing to do: they are always on while the head is worn. |
-| Special power (attack, teleport, dash, cleanse) | **Crouch once**. Release crouch before using it again. Each mob has a cooldown, shared by all its variants. |
+| Special power (attack, teleport, dash, cleanse) | **Press crouch** once (it also works underwater). If crouch stays on, as it does on touch screens, tap it again to stand up first: standing up never fires the power. Each mob has a cooldown, shared by all its variants, and a message tells you when a long cooldown is over. |
 | Fly (Bat, Parrot, Allay, Bee, Happy Ghast, Phantom, Vex, Blaze, Ghast, Wither, Dragon) | Hold **Jump** to rise, steer with the movement controls, release Jump to glide down, crouch to descend. Works in Survival. |
 | Climb (Spider, Cave Spider) | Face a wall and hold **Jump**. |
 | Swim faster (aquatic heads) | Use the normal swimming controls. |
@@ -140,6 +140,13 @@ Good to know:
 - Creeper blasts hurt nearby mobs without hurting you or breaking blocks.
   Fire bolts and other magic attacks are aimed strikes that do not destroy
   terrain.
+- Aimed powers (Warden sonic boom, fire bolts, beams, spit, arrows and
+  snowballs) have aim assist: they lock on to the mob nearest the middle of
+  the screen, so on an iPad or phone you only need to face the mob roughly.
+  If nothing is in front of you they hit the last mob you attacked. Pets and
+  other players are only hit if you aim right at them.
+- A missed beam is still drawn so you can see where it went, and a miss does
+  not start the cooldown.
 - Teleporting needs an empty spot with ground underneath and stops at walls.
 - These are playable takes on each mob's traits, not a full transformation.
   Mobs without a useful player power give a related trait such as resistance,

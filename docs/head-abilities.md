@@ -1,6 +1,6 @@
 # Worn head abilities
 
-All variants share their mob's power. Equip a head in the helmet slot. Crouch once for a special power, then release crouch before using it again. Durations in parentheses are cooldowns. Roman numerals denote potion levels.
+All variants share their mob's power. Equip a head in the helmet slot. Press crouch once for a special power (if crouch stays on, as on touch screens, tap it again to stand up first; standing up never fires). Aimed powers lock on to the mob nearest the middle of the screen. Durations in parentheses are cooldowns. Roman numerals denote potion levels.
 
 | Mob | Abilities and controls |
 | --- | --- |
